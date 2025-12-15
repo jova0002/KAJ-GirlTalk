@@ -1,4 +1,5 @@
-@import 'tailwindcss';
+@import "tailwindcss";
+@plugin "daisyui";
 
 @plugin '@tailwindcss/typography';
 @plugin '@tailwindcss/forms';
@@ -6,45 +7,105 @@
 @import "tailwindcss-intersect";
 
 @font-face {
-  font-family: 'Honk';
-  src: url('/fonts/Honk-Regular-VariableFont_MORF,SHLN.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Quicksand';
-  src: url('/fonts/Quicksand-VariableFont_wght.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Domine';
-  src: url('/fonts/Domine-Regular.ttf') format('truetype');
+  font-family: "Instrument Sans", sans-serif;
+  src: url("/fonts/InstrumentSans-VariableFont_wdth,wght.ttf") format("truetype");
 }
 
 @theme {
   /* Her tilføjes theme variable // tokens */
 
   /*Farver */
-  --color-primary-400: #00E4F5;
-  --color-primary-500: #006269;
-  --color-primary-600: #006D75;
-  --color-secondary-400: #F5E400;
-  --color-secondary-500: #F5A600;
-  --color-secondary-600: #F57A00;
+  --color-primary-pink: #ffe4e5;
+  --color-primary-blue: #1f3db0;
+  --color-primary-beige: #fff5e9;
+  --color-primary-brown: #401609;
 
   /*Typografi */
-  --font-display: 'Honk', monospace;
-  --font-sans: 'Quicksand', sans-serif;
-  --font-serif: 'Domine', serif;
+  --font-main: "Instrument Sans", sans-serif;
 }
 
 @layer base {
+  .H1 {
+    font-family: var(--font-main);
+  }
+  h2,
+  .H2 {
+    font-family: var(--font-main);
+  }
+  .H3 {
+    font-family: var(--font-main);
+  }
+  .H4 {
+    font-family: var(--font-main);
+  }
+  .H5 {
+    font-family: var(--font-main);
+  }
+  .Pstor {
+    font-family: var(--font-main);
+  }
+  .Brødtekst {
+    font-family: var(--font-main);
+  }
+  .Microcopystor {
+    font-family: var(--font-main);
+  }
+  .Microcopylille {
+    font-family: var(--font-main);
+  }
+  .Formheadings {
+    font-family: var(--font-main);
+  }
 
+  .H1-mobil {
+    font-family: var(--font-main);
+  }
+  .H2-mobil {
+    font-family: var(--font-main);
+  }
+  .H3-mobil {
+    font-family: var(--font-main);
+  }
+  .H4-mobil {
+    font-family: var(--font-main);
+  }
+  .H5-mobil {
+    font-family: var(--font-main);
+  }
+  .Pstor-mobil {
+    font-family: var(--font-main);
+  }
+  .Brødtekst-mobil {
+    font-family: var(--font-main);
+  }
+  .Microcopystor-mobil {
+    font-family: var(--font-main);
+  }
+  .Microcopylille-mobil {
+    font-family: var(--font-main);
+  }
+  .Formheadings-mobil {
+    font-family: var(--font-main);
+  }
+
+  /* Farver */
+
+  .color-primary-pink {
+    color: var(--color-primary-pink);
+  }
+  .color-primary-blue {
+    color: var(--color-primary-blue);
+  }
+  .color-primary-beige {
+    color: var(--color-primary-beige);
+  }
+  .color-primary-brown {
+    color: var(--color-primary-brown);
+  }
 }
 
-@layer components{
-
+@layer components {
 }
 
-@layer utilities{
-  
+@layer utilities {
 }
