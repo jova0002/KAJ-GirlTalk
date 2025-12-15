@@ -1,20 +1,27 @@
 ---
 // Henter parametrene fra Astro.props
-const { htmlheading="h2", size="medium", font="sans", stylingclasses=""} = Astro.props; 
+const { htmlheading = "h2", size = "medium", font = "sans-serif", stylingclasses = "text-[var(--color-primary-brown)]" } = Astro.props;
 const Htmlheading = htmlheading;
- 
+
 //Definer den styling (Tailwind classes), der gør sig gældende for de forskellige størrelser.
 const sizeClasses = {
-"large": "text-3xl lg:text-6xl",
-"medium": "text-2xl lg:text-3xl",
-"small": "text-xl",
+  h1: "text-[72px] md:text-[268px] font-main font-bold",
+  h2: "text-[18px] md:text-[36px] font-main font-bold",
+  h3: "text-[17px] md:text-[32px] font-main font-bold",
+  h4: "text-[32px] md:text-[98px] font-main font-bold",
+  h5: "text-[54px] md:text-[178px] font-main font-regular",
+  pstor: "text-[17px] md:text-[32px] font-main",
+  microcopystor: "text-[11px] md:text-[20px] font-main",
+  microcopylille: "text-[9px] md:text-[14px] font-main",
+  formheadings: "text-[15px] md:text-[24px] font-main font-bold",
 };
 
 //Definer den styling (Tailwind classes), der gør sig gældende for de forskellige skrifttyper.
 const fontClasses = {
-"display": "font-display",
-"sans": "font-sans",
-"serif": "font-serif",
+  display: "font-display",
+  sans: "font-sans",
+  serif: "font-serif",
 };
 ---
+
 <Htmlheading class:list={[stylingclasses, sizeClasses[size], fontClasses[font]]}><slot /></Htmlheading>
