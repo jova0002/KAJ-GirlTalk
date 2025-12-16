@@ -1,7 +1,118 @@
 ---
+import Heading from "./Heading.astro";
+import Text from "./Text.astro";
+import Button from "./Button.astro";
 ---
-<footer class="bg-primary-500 text-white">
-    <div class="container mx-auto p-4">
-        <p>&copy; 2025</p>
+
+<footer class="w-full bg-[var(--color-primary-beige)]">
+  <div class="grid md:grid-cols-3">
+    <!-- ================= LEFT: NEWSLETTER ================= -->
+    <div class="bg-[var(--color-primary-pink)]
+             px-18 py-10
+             md:px-12 md:py-14
+             border-b md:border-b-0 md:border-r
+             border-[var(--color-primary-brown)]
+             text-[var(--color-primary-brown)]">
+      <Heading size="h2" htmlheading="h2">NYHEDSBREV</Heading>
+
+      <Text teksttype="brødtekst" class="mt-4 max-w-sm"> Få information om GirlTalks arbejde og støttetilbud serveret direkte i din indbakke. </Text>
+
+      <form class="mt-8 space-y-6">
+        <div>
+          <Heading size="formheadings" htmlheading="label">Email adresse</Heading>
+          <input type="email" placeholder="Indtast email adresse her" class="w-full mt-2 p-2 bg-transparent
+         border border-[var(--color-primary-brown)]
+         text-[var(--color-primary-brown)]
+         placeholder-[var(--color-primary-brown)]
+         placeholder-opacity-60
+                  focus:outline-none
+         focus:border-[var(--color-primary-brown)]
+         focus:ring-0" />
+        </div>
+
+        <div>
+          <Heading size="formheadings" htmlheading="label">Fulde navn</Heading>
+          <input type="email" placeholder="Indtast fulde navn her" class="w-full mt-2 p-2 bg-transparent
+         border border-[var(--color-primary-brown)]
+         text-[var(--color-primary-brown)]
+         placeholder-[var(--color-primary-brown)]
+         placeholder-opacity-60
+                 focus:outline-none
+         focus:border-[var(--color-primary-brown)]
+         focus:ring-0" />
+        </div>
+
+        <Button>SEND</Button>
+      </form>
     </div>
+
+    <!-- ================= RIGHT: BROWN FOOTER ================= -->
+    <div class="md:col-span-2
+             bg-[var(--color-primary-brown)]
+             text-[var(--color-primary-pink)]
+             px-8 py-10
+             md:px-20 md:py-14">
+      <!-- TITLE -->
+      <Heading size="h5" htmlheading="h2" stylingclasses="text-[var(--color-primary-pink)] leading-none"> GIRL TALK </Heading>
+
+      <!-- CONTENT -->
+      <div class="mt-7 grid gap-16 md:grid-cols-2">
+        <!-- FOLLOW -->
+        <div class="flex flex-col h-full">
+          <Heading size="h2" htmlheading="h3" stylingclasses="text-[var(--color-primary-pink)]"> FØLG OS </Heading>
+
+          <!-- SOCIAL ICONS -->
+          <div class="mt-6 grid grid-cols-3 gap-6 w-max">
+            <a href="#" aria-label="YouTube">
+              <img src="/Youtube.svg" alt="" class="w-8 h-8" />
+            </a>
+            <a href="#" aria-label="Facebook">
+              <img src="/Facebook.svg" alt="" class="w-8 h-8" />
+            </a>
+            <a href="#" aria-label="TikTok">
+              <img src="/TikTok.svg" alt="" class="w-8 h-8" />
+            </a>
+            <a href="#" aria-label="LinkedIn">
+              <img src="/LinkedIn.svg" alt="" class="w-8 h-8" />
+            </a>
+            <a href="#" aria-label="Spotify">
+              <img src="/Spotify.svg" alt="" class="w-8 h-8" />
+            </a>
+            <a href="#" aria-label="Instagram">
+              <img src="/Instagram.svg" alt="" class="w-8 h-8" />
+            </a>
+          </div>
+          <div class="pt-12 md:pt-18">
+            <!-- BOTTOM CVR (aligned with button) -->
+            <Heading size="microcopylille" class="mt-auto text-[var(--color-primary-pink)]">
+              CVR 30 14 53 48<br />
+              Martinsvej 7, 1926 Frederiksberg C
+            </Heading>
+          </div>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="flex flex-col items-end text-right h-full">
+          <Heading size="h2" htmlheading="h3" stylingclasses="text-[var(--color-primary-pink)]"> KONTAKT OS </Heading>
+
+          <div class="pt-3">
+            <Text teksttype="microcopystor" class="mt-6 max-w-xs text-right">
+              Telefontid mandag til torsdag<br />
+              kl. 10.00 til 13.00
+            </Text>
+          </div>
+          <div class="pt-3">
+            <Text teksttype="microcopystor" class="mt-4 text-right">
+              +45 51 91 33 77<br />
+              info@girltalk.dk
+            </Text>
+          </div>
+          <!-- BUTTON BOTTOM -->
+          <div class="pt-8 md:pt-7 mt-auto">
+            <Button variant="outline">BLIV FRIVILLIG</Button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </footer>
