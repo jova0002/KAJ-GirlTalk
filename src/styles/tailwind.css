@@ -7,7 +7,7 @@
 @import "tailwindcss-intersect";
 
 @font-face {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: "Instrument Sans";
   src: url("/fonts/InstrumentSans-VariableFont_wdth,wght.ttf") format("truetype");
 }
 
@@ -21,7 +21,7 @@
   --color-primary-brown: #401609;
 
   /*Typografi */
-  --font-main: "Instrument Sans", sans-serif;
+  --font-main: "Instrument Sans";
 }
 
 @layer base {
