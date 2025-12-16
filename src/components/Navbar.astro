@@ -1,0 +1,124 @@
+---
+import Heading from "./Heading.astro";
+
+const navItems = [
+  { label: "BLIV FRIVILLIG", href: "/frivillig" },
+  { label: "OM OS", href: "/omos" },
+  { label: "VORES TILBUD", href: "/tilbud" },
+  { label: "STØT", href: "/stoet" },
+  { label: "SHOP", href: "/shop" },
+];
+---
+
+<nav class="w-full
+    bg-[var(--color-primary-beige)]
+    border-b border-[var(--color-primary-brown)]
+    overflow-hidden">
+  <!-- ================= DESKTOP NAV ================= -->
+  <div class="hidden md:flex h-[64px] items-stretch">
+    <!-- Logo -->
+    <a href="/" class="flex items-center px-6
+        border-r border-[var(--color-primary-brown)]
+        shrink-0
+        text-[var(--color-primary-brown)]">
+      <img src="/logo.svg" alt="GIRLTALK DK" class="h-5 text-[var(--color-primary-brown)]" />
+    </a>
+
+    <!-- Nav items -->
+    {
+      navItems.map((item) => (
+        <a
+          href={item.href}
+          class="
+          flex flex-1 items-center justify-center
+          border-r border-[var(--color-primary-brown)]
+          transition-colors duration-200
+          hover:bg-[var(--color-primary-pink)]
+          whitespace-nowrap
+          text-[var(--color-primary-brown)]
+        "
+        >
+          <Heading size="microcopystor" htmlheading="span">
+            {item.label}
+          </Heading>
+        </a>
+      ))
+    }
+
+    <!-- CTA -->
+    <a href="/for-unge" class="flex flex-1 items-center justify-center
+        bg-[var(--color-primary-brown)]
+        text-[var(--color-primary-beige)]
+        whitespace-nowrap">
+      <Heading size="microcopystor" htmlheading="span" stylingclasses="font-bold"> GÅ TIL “FOR UNGE” </Heading>
+    </a>
+  </div>
+
+  <!-- ================= MOBILE TOP BAR ================= -->
+  <div class="md:hidden flex justify-end px-5 py-5">
+    <button id="burger" aria-label="Menu" class="text-[var(--color-primary-brown)]
+        text-2xl
+        cursor-pointer
+        select-none"> ☰ </button>
+  </div>
+
+  <!-- ================= MOBILE MENU ================= -->
+  <div id="mobileMenu" class="md:hidden
+      max-h-0 overflow-hidden
+      transition-[max-height] duration-300 ease-in-out
+      bg-[var(--color-primary-beige)]">
+    <!-- Mobile menu header -->
+    <div class="flex items-center px-5 py-5
+        border-b border-[var(--color-primary-brown)]
+        text-[var(--color-primary-brown)]">
+      <img src="/logo.svg" alt="GIRLTALK DK" class="h-5 text-[var(--color-primary-brown)]" />
+    </div>
+
+    <!-- Mobile nav items -->
+    <div class="flex flex-col">
+      {
+        navItems.map((item) => (
+          <a
+            href={item.href}
+            class="
+            px-5 py-5
+            border-b border-[var(--color-primary-brown)]
+            text-[var(--color-primary-brown)]
+          "
+          >
+            <Heading size="microcopystor" htmlheading="span">
+              {item.label}
+            </Heading>
+          </a>
+        ))
+      }
+
+      <!-- Mobile CTA -->
+      <a href="/for-unge" class="px-5 py-6
+          bg-[var(--color-primary-brown)]
+          text-[var(--color-primary-beige)]">
+        <Heading size="microcopystor" htmlheading="span" stylingclasses="font-bold"> GÅ TIL “FOR UNGE” </Heading>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= SCRIPT ================= -->
+<script>
+  const burger = document.getElementById("burger");
+  const menu = document.getElementById("mobileMenu");
+
+  let isOpen = false;
+
+  burger?.addEventListener("click", () => {
+    isOpen = !isOpen;
+
+    if (isOpen) {
+      menu.style.maxHeight = menu.scrollHeight + "px";
+      burger.textContent = "✕";
+    } else {
+      menu.style.maxHeight = null;
+      burger.textContent = "☰";
+    }
+  });
+</script>

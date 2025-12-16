@@ -25,6 +25,10 @@
 }
 
 @layer base {
+  .font-main {
+    font-family: var(--font-main);
+  }
+
   .H1 {
     font-family: var(--font-main);
   }
