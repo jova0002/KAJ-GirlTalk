@@ -1,0 +1,35 @@
+---
+const {
+    title = "",
+    text = "",
+    linkText = "",
+    href = "#",
+    variant = "arrow", // "arrow" | "spotify"
+} = Astro.props;
+---
+
+<article class="bg-primary-brown text-base-100 p-10 flex flex-col justify-between min-h-[520px] border border-base-100/20">
+    <div>
+        <h2 class="text-4xl md:text-5xl font-extrabold uppercase leading-tight">
+            {title}
+        </h2>
+
+        <p class="mt-8 text-lg leading-relaxed opacity-90">
+            {text}
+        </p>
+    </div>
+
+    <a href={href} class="mt-12 inline-flex items-end justify-between gap-6 uppercase tracking-wide border-b border-current w-full pb-2">
+        <span>{linkText}</span>
+
+        {
+            variant === "spotify" ? (
+                <img src="/spotify.svg" alt="Spotify" class="w-10 h-10" />
+            ) : (
+                <span aria-hidden="true" class="text-4xl leading-none">
+                    →
+                </span>
+            )
+        }
+    </a>
+</article>
