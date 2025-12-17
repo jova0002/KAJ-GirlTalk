@@ -8,14 +8,80 @@ import Navbar from "../components/Navbar.astro";
 
 <MainLayout>
   <main class="bg-[var(--color-primary-beige)]">
-    <Heading htmlheading="h1" size="h1"> GIRL TALK </Heading>
-    <Heading htmlheading="h1" size="h2"> TEST H1 </Heading>
-    <Heading htmlheading="h1" size="h3"> TEST H1 </Heading>
-    <Heading htmlheading="h1" size="h4"> TEST H1 </Heading>
-    <Heading htmlheading="h1" size="h5"> TEST H1 </Heading>
-    <Heading htmlheading="h1" size="pstor"> TEST H1 </Heading>
-    <Heading htmlheading="h1" size="microcopystor"> TEST H1 </Heading>
-    <Heading htmlheading="h1" size="microcopylille"> TEST H1 </Heading>
-    <Heading htmlheading="h1" size="formheadings"> TEST H1 </Heading>
+    <!-- ================= HERO SECTION ================= -->
+    <section class="relative bg-[var(--color-primary-beige)] h-[100vh] min-h-[820px] overflow-hidden md:block">
+      <!-- STAR -->
+      <img src="/stjerne_forside.svg" alt="" class="absolute top-2 left-70 w-30 md:top-20 md:left-260 lg:w-50" />
+
+      <!-- TITLE BLOCK -->
+      <div class="absolute left-4 top-10 md:left-110 md:top-20">
+        <Heading size="h5" htmlheading="h1" stylingclasses="text-[var(--color-primary-brown)] leading-none"> BLIV </Heading>
+      </div>
+      <div class="absolute right-4 top-30 md:left-150 md:top-60">
+        <Heading size="h5" htmlheading="h1" stylingclasses="text-[var(--color-primary-brown)] leading-none mt-4"> FRIVILLIG </Heading>
+      </div>
+    </section>
+
+    <!-- BUTTON -->
+    <div class="absolute top-195 left-4 md:top-140 md:left-200">
+      <Button>ANSØG HER</Button>
+    </div>
+
+    <!-- LEFT CONTENT -->
+    <div class="pb-10 md:pb-0 mt-40 md:mt-80">
+      <div class="absolute left-60 top-80 md:left-30 md:top-80 max-w-md">
+        <img src="/girls_together.webp" alt="Girls together" class="mb-10 h-50 w-60 md:h-80 md:w-100" />
+      </div>
+
+      <div class="absolute pl-4 pr-20 top-140 md:pl-80 md:pr-0 md:top-180">
+        <Heading size="h2" htmlheading="h2" stylingclasses="text-[var(--color-primary-brown)]"> ØNSKER DU AT BLIVE FRIVILLIG HOS OS? </Heading>
+
+        <Heading size="pstor" htmlheading="h2" stylingclasses="pt-5 pr-15 md:pt-5 md:pr-30 lg:pr-120 text-[var(--color-primary-brown)]"> Rigtig mange piger og unge kvinder har brug for vores hjælp. Derfor har vi brug for flere frivillige. </Heading>
+      </div>
+    </div>
+
+    <!-- ================= Text Section ================= -->
+
+    <section class="bg-[var(--color-primary-beige)]">
+      <!-- FULL WIDTH WRAPPER -->
+      <div class="w-full">
+        <!-- BORDER + GRID -->
+        <div class="grid md:grid-cols-2
+             border border-[var(--color-primary-brown)]">
+          <!-- IMAGE -->
+          <div class="w-full h-full">
+            <img src="/phone.webp" alt="Telefon" class="w-full h-full object-cover" />
+          </div>
+
+          <!-- TEXT -->
+          <div class="flex flex-col justify-center
+               px-8 py-12
+               md:px-16 md:py-20
+               text-[var(--color-primary-brown)]
+               md:border-l border-[var(--color-primary-brown)]">
+            <!-- H2 -->
+            <Heading size="h2" htmlheading="h2">
+              GØR EN FORSKEL OG BLIV EN<br />
+              DEL AF ET FÆLLESSKAB
+            </Heading>
+
+            <!-- BODY -->
+            <Text teksttype="brødtekst" class="mt-6 max-w-md"> Som frivillig i GirlTalk gør du en forskel for piger, der har brug for nogen at tale med. Samtidig får du styrket din faglige profil, og du bliver en del af et socialt fællesskab med andre frivillige. </Text>
+
+            <!-- H3 -->
+            <Heading size="h3" htmlheading="h3" class="mt-10">
+              Vil du være frivillig gruppeleder<br />
+              eller ungerådgiver?
+            </Heading>
+
+            <!-- BUTTONS -->
+            <div class="mt-6 flex gap-4 flex-wrap">
+              <Button>BLIV FRIVILLIG</Button>
+              <Button>LÆS MERE HER</Button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 </MainLayout>
