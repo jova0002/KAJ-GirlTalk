@@ -28,7 +28,7 @@ import Button from "./Button.astro";
          placeholder-opacity-60 focus:outline-none focus:border-[var(--color-primary-brown)] focus:ring-0" />
         </div>
 
-        <Button as="a" href="/ansog" variant="pink" size="xxs">SEND</Button>
+        <Button as="a" href="/" variant="pink" size="xxs">SEND</Button>
       </form>
     </div>
 
@@ -45,22 +45,22 @@ import Button from "./Button.astro";
 
           <!-- SOCIAL ICONS -->
           <div class="mt-6 grid grid-cols-3 gap-6 w-max">
-            <a href="#" aria-label="YouTube">
+            <a href="https://www.youtube.com/c/GIRLTALKdanmark" aria-label="YouTube">
               <img src="/Youtube.svg" alt="" class="w-8 h-8" />
             </a>
-            <a href="#" aria-label="Facebook">
+            <a href="https://www.facebook.com/GirlTalkdk" aria-label="Facebook">
               <img src="/Facebook.svg" alt="" class="w-8 h-8" />
             </a>
-            <a href="#" aria-label="TikTok">
+            <a href="https://www.tiktok.com/discover/girltalkdk?lang=en&sender_device=pc&sender_web_id=6957282728916256262&is_from_webapp=v1&is_copy_url=0" aria-label="TikTok">
               <img src="/TikTok.svg" alt="" class="w-8 h-8" />
             </a>
-            <a href="#" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/company/girltalk.dk/" aria-label="LinkedIn">
               <img src="/LinkedIn.svg" alt="" class="w-8 h-8" />
             </a>
-            <a href="#" aria-label="Spotify">
+            <a href="https://open.spotify.com/show/15oq5yztN1NwZjQn4HIMLg?si=2041342865dd449f&nd=1&dlsi=994c816d50c344da" aria-label="Spotify">
               <img src="/Spotify.svg" alt="" class="w-8 h-8" />
             </a>
-            <a href="#" aria-label="Instagram">
+            <a href="https://www.instagram.com/girltalkdk/" aria-label="Instagram">
               <img src="/Instagram.svg" alt="" class="w-8 h-8" />
             </a>
           </div>
@@ -83,15 +83,17 @@ import Button from "./Button.astro";
               kl. 10.00 til 13.00
             </Text>
           </div>
-          <div class="pt-3">
-            <Text teksttype="microcopystor" class="mt-4 text-right">
-              +45 51 91 33 77<br />
-              info@girltalk.dk
+          <div class="pt-3 text-right">
+            <Text teksttype="microcopystor">
+              <a href="tel:+4551913377" class="block cursor-pointer hover:underline"> +45 51 91 33 77 </a>
+
+              <a href="mailto:info@girltalk.dk" class="block cursor-pointer hover:underline"> info@girltalk.dk </a>
             </Text>
           </div>
+
           <!-- BUTTON BOTTOM -->
           <div class="pt-8 md:pt-7 mt-auto">
-            <Button as="a" href="/ansog" variant="darkpink" size="xxs">BLIV FRIVILLIG</Button>
+            <Button as="a" href="/Frivilig" variant="darkpink" size="xxs">BLIV FRIVILLIG</Button>
           </div>
         </div>
       </div>
