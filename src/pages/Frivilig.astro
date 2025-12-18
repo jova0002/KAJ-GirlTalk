@@ -24,7 +24,7 @@ import Navbar from "../components/Navbar.astro";
 
     <!-- BUTTON -->
     <div class="absolute top-195 left-4 md:top-140 md:left-200">
-      <Button as="a" href="/ansog" variant="pink" size="large">ANSØG HER</Button>
+      <Button as="a" href="#ansog" variant="pink" size="large">ANSØG HER</Button>
     </div>
 
     <!-- LEFT CONTENT -->
@@ -54,7 +54,7 @@ import Navbar from "../components/Navbar.astro";
           </div>
 
           <!-- TEXT -->
-          <div class="flex items-center flex-col px-8 py-12 md:px-10 md:py-20 text-brown border-t border-brown md:border-t-0 md:border-l">
+          <div class="flex items-center flex-col px-8 py-12 md:px-10 md:py-20 text-brown border-t border-primary-brown md:border-t-0 md:border-l">
             <!-- H2 -->
             <div class="pr-10 pl-10">
               <Heading size="h2" htmlheading="h2" stylingclasses="pb-2 tracking-title uppercase text-brown">GØR EN FORSKEL OG BLIV EN DEL AF ET FÆLLESSKAB </Heading>
@@ -68,8 +68,8 @@ import Navbar from "../components/Navbar.astro";
 
             <!-- BUTTONS -->
             <div class="pr-10 pl-10 md:pl-3 mt-6 flex gap-4 flex-wrap text-brown">
-              <Button as="a" href="/ansog" variant="pink" size="small">BLIV FRIVILLIG</Button>
-              <Button as="a" href="/ansog" variant="beige" size="small">LÆS MERE HER</Button>
+              <Button as="a" href="#ansog" variant="pink" size="small">BLIV FRIVILLIG</Button>
+              <Button as="a" href="/Omos" variant="beige" size="small">LÆS MERE HER</Button>
             </div>
           </div>
         </div>
@@ -77,7 +77,7 @@ import Navbar from "../components/Navbar.astro";
     </section>
 
     <!-- ================= FORM HEADING SECTION ================= -->
-    <section class="relative bg-[var(--color-primary-beige)] overflow-hidden">
+    <section id="ansog" class="relative bg-[var(--color-primary-beige)] overflow-hidden">
       <!-- RIGHT STAR -->
       <img src="/stjerne_forside.svg" alt="" aria-hidden="true" class="absolute left-85 -top-22 w-60 md:w-120 md:left-280
            md:-top-40 pointer-events-none" />
@@ -206,7 +206,7 @@ import Navbar from "../components/Navbar.astro";
 
           <!-- ================= SUBMIT ================= -->
           <div class="pt-10 border-t border-[var(--color-primary-brown)]">
-            <Button as="a" href="/ansog" variant="pink" size="small">SEND</Button>
+            <Button as="a" href="/Frivilig" variant="pink" size="small">SEND</Button>
           </div>
         </form>
       </div>
