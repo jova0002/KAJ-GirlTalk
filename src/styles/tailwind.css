@@ -112,4 +112,64 @@
 }
 
 @layer utilities {
+  .tracking-title {
+    letter-spacing: 0.05em;
+  }
+
+  @media (min-width: 768px) {
+    .tracking-title {
+      letter-spacing: 0.08em;
+    }
+  }
+
+  .text-brown {
+    color: var(--color-primary-brown);
+  }
+
+  .text-beige {
+    color: var(--color-primary-beige);
+  }
+
+  .leading-body {
+    line-height: 32px;
+  }
+
+  .check-blue {
+    color: var(--color-primary-blue);
+  }
+
+  .no-focus-ring {
+    outline: none;
+    box-shadow: none;
+  }
+
+  .no-focus-ring:focus-visible {
+    outline: none;
+    box-shadow: none;
+  }
+
+  .gt-checkbox {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    background-color: var(--color-primary-beige);
+    box-shadow: inset 0 0 0 1px var(--color-primary-brown);
+    cursor: pointer;
+  }
+
+  .gt-checkbox:checked {
+    background-color: var(--color-primary-blue);
+    box-shadow: inset 0 0 0 1px var(--color-primary-beige);
+  }
+
+  .gt-checkbox:focus {
+    outline: none;
+  }
+
+  @media (min-width: 768px) {
+    .leading-body {
+      line-height: 36px;
+    }
+  }
 }

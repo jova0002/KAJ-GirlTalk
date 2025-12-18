@@ -24,11 +24,11 @@ import Navbar from "../components/Navbar.astro";
 
     <!-- BUTTON -->
     <div class="absolute top-195 left-4 md:top-140 md:left-200">
-      <Button>ANSØG HER</Button>
+      <Button as="a" href="/ansog" variant="pink" size="large">ANSØG HER</Button>
     </div>
 
     <!-- LEFT CONTENT -->
-    <div class="pb-10 md:pb-0 mt-40 md:mt-80">
+    <div class="pb-10 md:pb-0 mt-10 md:mt-15">
       <div class="absolute left-60 top-80 md:left-30 md:top-80 max-w-md">
         <img src="/girls_together.webp" alt="Girls together" class="mb-10 h-50 w-60 md:h-80 md:w-100" />
       </div>
@@ -36,7 +36,7 @@ import Navbar from "../components/Navbar.astro";
       <div class="absolute pl-4 pr-20 top-140 md:pl-80 md:pr-0 md:top-180">
         <Heading size="h2" htmlheading="h2" stylingclasses="text-[var(--color-primary-brown)]"> ØNSKER DU AT BLIVE FRIVILLIG HOS OS? </Heading>
 
-        <Heading size="pstor" htmlheading="h2" stylingclasses="pt-5 pr-15 md:pt-5 md:pr-30 lg:pr-120 text-[var(--color-primary-brown)]"> Rigtig mange piger og unge kvinder har brug for vores hjælp. Derfor har vi brug for flere frivillige. </Heading>
+        <Heading size="pstor" htmlheading="h2" stylingclasses="pt-5 pr-15 md:pt-5 md:pr-10 lg:pr-100 text-[var(--color-primary-brown)]"> Rigtig mange piger og unge kvinder har brug for vores hjælp. Derfor har vi brug for flere frivillige. </Heading>
       </div>
     </div>
 
@@ -54,30 +54,195 @@ import Navbar from "../components/Navbar.astro";
           </div>
 
           <!-- TEXT -->
-          <div class="flex flex-col justify-center
-               px-8 py-12
-               md:px-16 md:py-20
-               text-[var(--color-primary-brown)]
-               md:border-l border-[var(--color-primary-brown)]">
+          <div class="flex items-center flex-col px-8 py-12 md:px-10 md:py-20 text-brown border-t border-brown md:border-t-0 md:border-l">
             <!-- H2 -->
-            <Heading size="h2" htmlheading="h2">
-              GØR EN FORSKEL OG BLIV EN<br />
-              DEL AF ET FÆLLESSKAB
-            </Heading>
+            <div class="pr-10 pl-10">
+              <Heading size="h2" htmlheading="h2" stylingclasses="pb-2 tracking-title uppercase text-brown">GØR EN FORSKEL OG BLIV EN DEL AF ET FÆLLESSKAB </Heading>
 
-            <!-- BODY -->
-            <Text teksttype="brødtekst" class="mt-6 max-w-md"> Som frivillig i GirlTalk gør du en forskel for piger, der har brug for nogen at tale med. Samtidig får du styrket din faglige profil, og du bliver en del af et socialt fællesskab med andre frivillige. </Text>
+              <!-- BODY -->
+              <Text teksttype="brødtekst" stylingclasses="mt-6 md:pb-10 text-brown"> Som frivillig i GirlTalk gør du en forskel for piger, der har brug for nogen at tale med. Samtidig får du styrket din faglige profil, og du bliver en del af et socialt fællesskab med andre frivillige. </Text>
 
-            <!-- H3 -->
-            <Heading size="h3" htmlheading="h3" class="mt-10">
-              Vil du være frivillig gruppeleder<br />
-              eller ungerådgiver?
-            </Heading>
+              <!-- H3 -->
+              <Heading size="h3" htmlheading="h3" stylingclasses="pb-10 text-brown tracking-title">Vil du være frivillig gruppeleder eller ungerådgiver? </Heading>
+            </div>
 
             <!-- BUTTONS -->
-            <div class="mt-6 flex gap-4 flex-wrap">
-              <Button>BLIV FRIVILLIG</Button>
-              <Button>LÆS MERE HER</Button>
+            <div class="pr-10 pl-10 md:pl-3 mt-6 flex gap-4 flex-wrap text-brown">
+              <Button as="a" href="/ansog" variant="pink" size="small">BLIV FRIVILLIG</Button>
+              <Button as="a" href="/ansog" variant="beige" size="small">LÆS MERE HER</Button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FORM HEADING SECTION ================= -->
+    <section class="relative bg-[var(--color-primary-beige)] overflow-hidden">
+      <!-- RIGHT STAR -->
+      <img src="/stjerne_forside.svg" alt="" aria-hidden="true" class="absolute left-85 -top-22 w-60 md:w-120 md:left-280
+           md:-top-40 pointer-events-none" />
+
+      <!-- LEFT STAR  -->
+      <img src="/stjerne_forside.svg" alt="" aria-hidden="true" class="absolute left-60 top-6
+           w-25 md:w-50 md:left-150 md:top-20 pointer-events-none" />
+
+      <!-- CONTENT -->
+      <div class="relative z-10 px-6 py-12 pl-4 pb-3 md:pt-30 md:pb-0 md:px-10 md:py-10">
+        <div class="max-w-5xl">
+          <Heading size="h4" htmlheading="h2" stylingclasses="text-brown tracking-title uppercase"> ANSØG HER </Heading>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FORM SECTION ================= -->
+
+    <section class="bg-[var(--color-primary-beige)]">
+      <div class="w-full flex justify-center border border-[var(--color-primary-brown)]">
+        <!-- FORM WRAPPER -->
+        <form class="w-full max-w-3xl
+             px-6 py-10
+             md:px-16 md:py-16
+             text-brown">
+          <!-- ================= NAME ================= -->
+          <div class="mb-8">
+            <Heading size="formheadings" htmlheading="label"> Fulde navn </Heading>
+            <input type="text" placeholder="Indtast fulde navn her" class="w-full mt-2 p-2 bg-transparent
+         border border-[var(--color-primary-brown)] text-[var(--color-primary-brown)]
+         placeholder-[var(--color-primary-brown)] placeholder-opacity-60 focus:outline-none
+         focus:border-[var(--color-primary-brown)] focus:ring-0" />
+          </div>
+
+          <!-- ================= EMAIL ================= -->
+          <div class="mb-8">
+            <Heading size="formheadings" htmlheading="label"> Email adresse </Heading>
+            <input type="email" placeholder="Indtast email adresse her" class="w-full mt-2 p-2 bg-transparent
+         border border-[var(--color-primary-brown)] text-[var(--color-primary-brown)]
+         placeholder-[var(--color-primary-brown)] placeholder-opacity-60 focus:outline-none
+         focus:border-[var(--color-primary-brown)] focus:ring-0" />
+            <Heading size="microcopylille" htmlheading="label" stylingclasses="mt-2 text-brown/70"> En bekræftelsesmail vil blive sendt til denne adresse. </Heading>
+          </div>
+
+          <!-- ================= PHONE ================= -->
+          <div class="mb-10">
+            <Heading size="formheadings" htmlheading="label"> Telefon nummer </Heading>
+            <input type="tel" placeholder="Indtast telefon nummer her" class="w-full mt-2 p-2 bg-transparent
+         border border-[var(--color-primary-brown)] text-[var(--color-primary-brown)]
+         placeholder-[var(--color-primary-brown)] placeholder-opacity-60 focus:outline-none
+         focus:border-[var(--color-primary-brown)] focus:ring-0" />
+          </div>
+          <!-- ================= CV UPLOAD ================= -->
+          <div class="mb-12 flex flex-col">
+            <Heading size="formheadings" htmlheading="label"> Vedhæft dit CV </Heading>
+
+            <!-- Hidden file input -->
+            <input type="file" id="cv" class="hidden" />
+
+            <!-- Button underneath -->
+            <label for="cv" class="mt-3 inline-block w-fit
+         border border-[var(--color-primary-brown)]
+         bg-primary-pink
+         px-4 py-2
+         text-brown
+         cursor-pointer
+         shadow-md"> Vælg fil </label>
+          </div>
+
+          <!-- ================= LOCATION ================= -->
+          <div class="mb-12">
+            <Heading size="formheadings" htmlheading="legend"> Hvilken GirlTalk-afdeling vil du gerne tilknyttes? </Heading>
+
+            <div class="mt-4 space-y-3">
+              <label class="flex items-center gap-3">
+                <input type="checkbox" name="region" class="gt-checkbox" />
+                <Text teksttype="brødtekst">Midtjylland</Text>
+              </label>
+
+              <label class="flex items-center gap-3">
+                <input type="checkbox" name="region" class="gt-checkbox" />
+                <Text teksttype="brødtekst">Nordjylland</Text>
+              </label>
+
+              <label class="flex items-center gap-3">
+                <input type="checkbox" name="region" class="gt-checkbox" />
+                <Text teksttype="brødtekst">Sjælland</Text>
+              </label>
+
+              <label class="flex items-center gap-3">
+                <input type="checkbox" name="region" class="gt-checkbox" />
+                <Text teksttype="brødtekst">Fyn</Text>
+              </label>
+            </div>
+          </div>
+
+          <!-- ================= ROLE ================= -->
+          <div class="mb-14">
+            <Heading size="formheadings" htmlheading="legend">
+              Hvilken GirlTalk-indsats vil du gerne tilknyttes? Vælg evt. flere.
+              <span class="block mt-2 text-brown/70 text-sm"> (Bemærk, er du over 35 år, kan du kun være frivillig som Forældrerådgiver i GirlTalk) </span>
+            </Heading>
+
+            <div class="mt-6 space-y-4">
+              <label class="flex items-center gap-4 cursor-pointer">
+                <input type="checkbox" class="gt-checkbox" />
+                <Text teksttype="brødtekst">Rådgivning (chat- og sms)</Text>
+              </label>
+
+              <label class="flex items-center gap-4 cursor-pointer">
+                <input type="checkbox" class="gt-checkbox" />
+                <Text teksttype="brødtekst"> Fællesskaber (gruppeleder i EmpowR & Sisterhood) </Text>
+              </label>
+
+              <label class="flex items-center gap-4 cursor-pointer">
+                <input type="checkbox" class="gt-checkbox" />
+                <Text teksttype="brødtekst">Pigetanter (brevkasseskribent)</Text>
+              </label>
+
+              <label class="flex items-center gap-4 cursor-pointer">
+                <input type="checkbox" class="gt-checkbox" />
+                <Text teksttype="brødtekst"> Forældrerådgiver (telefonisk rådgivning) </Text>
+              </label>
+            </div>
+          </div>
+
+          <!-- ================= SUBMIT ================= -->
+          <div class="pt-10 border-t border-[var(--color-primary-brown)]">
+            <Button as="a" href="/ansog" variant="pink" size="small">SEND</Button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ================= Text Section ================= -->
+
+    <section class="bg-[var(--color-primary-beige)]">
+      <!-- FULL WIDTH WRAPPER -->
+      <div class="w-full">
+        <!-- BORDER + GRID -->
+        <div class="grid md:grid-cols-2">
+          <!-- IF U WANT TO CHANGE BORDER THEN DELETE -->
+
+          <!-- IMAGE -->
+          <div class="w-full h-full md:order-2">
+            <img src="/sitting_girl.webp" alt="Telefon" class="w-full h-full object-cover" />
+          </div>
+
+          <!-- TEXT -->
+          <div class="flex items-center flex-col px-8 py-12 md:px-10 md:py-20 text-brown border-t border-brown md:border-t-0 md:border-r md:order-1">
+            <!-- TEXT CONTENT -->
+            <div class="px-10">
+              <!-- H2 -->
+              <Heading size="h2" htmlheading="h2" stylingclasses="pb-4 tracking-title uppercase text-brown"> Har du lyst til at holde foredrag for piger og unge kvinder? </Heading>
+
+              <!-- H3 -->
+              <Heading size="h3" htmlheading="h3" stylingclasses="pb-2 tracking-title text-brown"> Så kan du blive foredragsholder i GirlTalk.</Heading>
+
+              <!-- BODY -->
+              <Text teksttype="brødtekst" stylingclasses="mt-6 md:pb-10 text-brown"> Vil du være med til at fortælle unge piger, at de er gode nok som de er? Give dem redskaber til at navigere i teenageårene, når usikkerheden banker på? Er du god til at tale foran mange mennesker? Så bliv foredragsholder i GirlTalk.</Text>
+            </div>
+
+            <!-- BUTTONS -->
+            <div class="pl-20 md:pl-65 mt-6 flex gap-4 flex-wrap text-brown">
+              <Button as="a" href="/ansog" variant="beige" size="small">LÆS MERE HER</Button>
             </div>
           </div>
         </div>

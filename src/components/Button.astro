@@ -1,23 +1,92 @@
 ---
-// Henter parametrene fra Astro.props
-const { variant = "primary", size = "medium" } = Astro.props;
+import Heading from "./Heading.astro";
 
-//Definer den styling (Tailwind classes, der gør sig gældende for alle knapper)
-const buttonStyling = "border-2 px-16 py-4";
+interface Props {
+  variant?: "pink" | "beige" | "dark";
+  size?: "large" | "small" | "xs" | "xxs";
+  as?: "button" | "a";
+  href?: string;
+  children: any;
+}
 
-//Definer den styling (Tailwind classes), der gør sig gældende for de forskellige varianter
-const variantClasses = {
-  primary: "border-brown hover:bg-brown hover:text-white hover:-skew-x-12 transition-all duration-700" /* border-primary-500 */,
-  secondary: "border-brown-500 hover:bg-blue-500 hover:border-blue-200" /* border-secondary-500 */,
+const { variant: rawVariant = "beige", size = "small", as = "button", href = "#" } = Astro.props;
+
+/* ---------------- SAFE VARIANT MAP ---------------- */
+
+const variants = {
+  pink: {
+    bg: "bg-primary-pink",
+    text: "text-brown",
+    border: "border-[var(--color-primary-brown)]",
+    shadow: "bg-[var(--color-primary-brown)]",
+  },
+  beige: {
+    bg: "bg-[var(--color-primary-beige)]",
+    text: "text-brown",
+    border: "border-[var(--color-primary-brown)]",
+    shadow: "bg-[var(--color-primary-brown)]",
+  },
+  dark: {
+    bg: "bg-[var(--color-primary-brown)]",
+    text: "text-[var(--color-primary-beige)]",
+    border: "border-[var(--color-primary-beige)]",
+    shadow: "bg-[var(--color-primary-beige)]",
+  },
+  darkpink: {
+    bg: "bg-[var(--color-primary-brown)]",
+    text: "text-[var(--color-primary-pink)]",
+    border: "border-[var(--color-primary-pink)]",
+    shadow: "bg-[var(--color-primary-pink)]",
+  },
 };
 
-//Definer den styling (Tailwind classes), der gør sig gældende for de forskelligeog størrelser.
-const sizeClasses = {
-  large: "text-4xl",
-  medium: "text-xl",
-  small: "text-large",
+/* ✅ SAFETY NET — prevents crashes */
+const variant = rawVariant in variants ? rawVariant : "beige";
+
+/* ---------------- SIZE → HEADING MAP ---------------- */
+
+const sizeMap = {
+  large: "largebutton",
+  small: "smallbutton",
+  xs: "xsbutton",
+  xxs: "xxsbutton",
 };
 ---
 
-<!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list -->
-<button class:list={[buttonStyling, variantClasses[variant], sizeClasses[size]]}><slot /></button>
+<div class="relative inline-block">
+  <!-- SHADOW -->
+  <div class={`absolute inset-0 -translate-x-2 translate-y-2 ${variants[variant].shadow}`} aria-hidden="true"></div>
+
+  <!-- BUTTON / LINK -->
+  {
+    as === "a" ? (
+      <a
+        href={href}
+        class={`relative z-10 inline-flex items-center justify-center
+          border-2 uppercase tracking-title
+          transition-transform hover:-translate-x-1 hover:translate-y-1
+          px-6 py-3
+          ${variants[variant].bg}
+          ${variants[variant].border}`}
+      >
+        <Heading size={sizeMap[size]} htmlheading="span" stylingclasses={variants[variant].text}>
+          <slot />
+        </Heading>
+      </a>
+    ) : (
+      <button
+        type="button"
+        class={`relative z-10 inline-flex items-center justify-center
+          border-2 uppercase tracking-title
+          transition-transform hover:-translate-x-1 hover:translate-y-1
+          px-6 py-3
+          ${variants[variant].bg}
+          ${variants[variant].border}`}
+      >
+        <Heading size={sizeMap[size]} htmlheading="span" stylingclasses={variants[variant].text}>
+          <slot />
+        </Heading>
+      </button>
+    )
+  }
+</div>
