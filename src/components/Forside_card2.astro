@@ -1,0 +1,24 @@
+---
+import Heading from "../components/Heading.astro";
+import Text from "../components/Text.astro";
+
+const { title = "", text = "" } = Astro.props;
+---
+
+<article class="bg-primary-brown px-8 py-12 flex flex-col justify-between min-h-[420px] border border-primary-beige">
+    <!-- Top content -->
+    <div>
+        <Heading size="h3" stylingclasses="text-primary-beige uppercase tracking-wide">
+            {title}
+        </Heading>
+
+        <Text teksttype="brødtekst" stylingclasses="mt-6 text-primary-beige opacity-90 leading-relaxed">
+            {text}
+        </Text>
+    </div>
+
+    <!-- CTA-slot (knappen kommer udefra) -->
+    <div class="mt-10 flex justify-end md:justify-center">
+        <slot />
+    </div>
+</article>
