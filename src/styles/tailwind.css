@@ -4,7 +4,7 @@
 @plugin '@tailwindcss/typography';
 @plugin '@tailwindcss/forms';
 @import "tailwindcss-animated";
-@import "tailwindcss-intersect";
+@plugin "tailwindcss-intersect";
 
 @font-face {
   font-family: "Instrument Sans";
@@ -165,6 +165,17 @@
 
   .gt-checkbox:focus {
     outline: none;
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: all 0.7s ease-out;
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
   }
 
   @media (min-width: 768px) {
