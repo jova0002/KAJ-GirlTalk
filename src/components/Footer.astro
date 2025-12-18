@@ -7,12 +7,7 @@ import Button from "./Button.astro";
 <footer class="w-full bg-[var(--color-primary-beige)]">
   <div class="grid md:grid-cols-3">
     <!-- ================= LEFT: NEWSLETTER ================= -->
-    <div class="bg-[var(--color-primary-pink)]
-             px-18 py-10
-             md:px-12 md:py-14
-             border-b md:border-b-0 md:border-r
-             border-[var(--color-primary-brown)]
-             text-[var(--color-primary-brown)]">
+    <div class="bg-[var(--color-primary-pink)] px-18 py-10 md:px-12 md:py-14 border-b md:border-b-0 md:border-r border-[var(--color-primary-brown)] text-[var(--color-primary-brown)]">
       <Heading size="h2" htmlheading="h2">NYHEDSBREV</Heading>
 
       <Text teksttype="brødtekst" class="mt-4 max-w-sm"> Få information om GirlTalks arbejde og støttetilbud serveret direkte i din indbakke. </Text>
@@ -21,37 +16,24 @@ import Button from "./Button.astro";
         <div>
           <Heading size="formheadings" htmlheading="label">Email adresse</Heading>
           <input type="email" placeholder="Indtast email adresse her" class="w-full mt-2 p-2 bg-transparent
-         border border-[var(--color-primary-brown)]
-         text-[var(--color-primary-brown)]
-         placeholder-[var(--color-primary-brown)]
-         placeholder-opacity-60
-                  focus:outline-none
-         focus:border-[var(--color-primary-brown)]
-         focus:ring-0" />
+         border border-[var(--color-primary-brown)] text-[var(--color-primary-brown)]
+         placeholder-[var(--color-primary-brown)] placeholder-opacity-60 focus:outline-none
+         focus:border-[var(--color-primary-brown)] focus:ring-0" />
         </div>
 
         <div>
           <Heading size="formheadings" htmlheading="label">Fulde navn</Heading>
           <input type="email" placeholder="Indtast fulde navn her" class="w-full mt-2 p-2 bg-transparent
-         border border-[var(--color-primary-brown)]
-         text-[var(--color-primary-brown)]
-         placeholder-[var(--color-primary-brown)]
-         placeholder-opacity-60
-                 focus:outline-none
-         focus:border-[var(--color-primary-brown)]
-         focus:ring-0" />
+         border border-[var(--color-primary-brown)] text-[var(--color-primary-brown)] placeholder-[var(--color-primary-brown)]
+         placeholder-opacity-60 focus:outline-none focus:border-[var(--color-primary-brown)] focus:ring-0" />
         </div>
 
-        <Button>SEND</Button>
+        <Button as="a" href="/ansog" variant="pink" size="xxs">SEND</Button>
       </form>
     </div>
 
     <!-- ================= RIGHT: BROWN FOOTER ================= -->
-    <div class="md:col-span-2
-             bg-[var(--color-primary-brown)]
-             text-[var(--color-primary-pink)]
-             px-8 py-10
-             md:px-20 md:py-14">
+    <div class="md:col-span-2 bg-[var(--color-primary-brown)] text-[var(--color-primary-pink)] px-8 py-10 md:px-20 md:py-14">
       <!-- TITLE -->
       <Heading size="h5" htmlheading="h2" stylingclasses="text-[var(--color-primary-pink)] leading-none"> GIRL TALK </Heading>
 
@@ -109,7 +91,7 @@ import Button from "./Button.astro";
           </div>
           <!-- BUTTON BOTTOM -->
           <div class="pt-8 md:pt-7 mt-auto">
-            <Button variant="outline">BLIV FRIVILLIG</Button>
+            <Button as="a" href="/ansog" variant="darkpink" size="xxs">BLIV FRIVILLIG</Button>
           </div>
         </div>
       </div>
