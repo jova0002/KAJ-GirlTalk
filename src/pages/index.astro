@@ -14,7 +14,7 @@ import Aktuelt from "../components/Aktuelt.astro";
 
 <MainLayout title="Titel">
   <main class="bg-[var(--color-primary-beige)]">
-    <section class="relative">
+    <section class="relative reveal">
       <!-- GIRL -->
       <Heading size="h1" stylingclasses="pl-4 text-primary-brown md:pl-15"> GIRL</Heading>
       <!-- STJERNE -->
@@ -37,7 +37,7 @@ import Aktuelt from "../components/Aktuelt.astro";
         </div>
       </div>
       <!-- Tekst -->
-      <div class="md:grid md:grid-cols-2">
+      <div class="md:grid md:grid-cols-2 reveal">
         <div class="order-1 md:order-2">
           <div class="p-4 md:pt-40">
             <Heading size="h2" stylingclasses="pb-4 text-brown md:pr-8">ER DU KLAR TIL AT LYTTE, NÅR EN PIGE HAR BRUG FOR DET?</Heading>
@@ -52,7 +52,7 @@ import Aktuelt from "../components/Aktuelt.astro";
         </div>
       </div>
       <!-- quotes -->
-      <div class="p-4 space-y-20 md:p-20 relative pb-30 overflow-hidden">
+      <div class="p-4 space-y-20 md:p-20 relative pb-30 overflow-hidden reveal">
         <div class="max-w-85 md:max-w-200">
           <img src="/forside_quote.svg" alt="" class="w-15 md:w-30" />
           <Heading size="pstor" stylingclasses="text-brown md:p-15">At være frivillig i GirlTalk har givet mig et fællesskab, jeg ikke vidste, jeg manglede</Heading>
@@ -65,7 +65,7 @@ import Aktuelt from "../components/Aktuelt.astro";
       </div>
     </section>
     <!-- cards -->
-    <section class="grid md:grid-cols-3">
+    <section class="grid md:grid-cols-3 reveal">
       <img src="/forside_3.png" alt="" class="w-full order-0 md:order-2" />
       <Forside_card1 title="HAR DIN DATTER BRUG FOR ET TRYGT FÆLLESSKAB?" text="I GirlTalks fællesskaber mødes piger og deler tanker, tvivl og usikkerheder, og sammen finder de modet til at åbne op. Vi starter nye fællesskaber for 13-16 årige piger, i efteråret. Her får din datter et trygt rum, hvor hun kan spejle sig i andre og opleve, at hun ikke er alene." linkText="Læs mere om kampagnen" href="https://www.girltalk.dk/andet/staerkere-voksne-staerkere-unge/" variant="arrow" />
 
@@ -73,10 +73,10 @@ import Aktuelt from "../components/Aktuelt.astro";
     </section>
     <!-- Aktuelt-->
     <div class="relative">
-      <Heading size="h4" stylingclasses="flex text-brown justify-end pt-25 pr-4 pb-5">AKTUELT</Heading>
-      <img src="/stjerne_forside.svg" alt="" class="absolute w-30 top-15 left-58 md:w-70 md:left-190 md:top-2" />
+      <Heading size="h4" stylingclasses="flex text-brown justify-end pt-25 pr-4 pb-5 reveal">AKTUELT</Heading>
+      <img src="/stjerne_forside.svg" alt="" class="absolute w-30 top-15 left-58 md:w-70 md:left-190 md:top-2 reveal" />
     </div>
-    <div class="border border-primary-brown divide-y divide-primary-brown">
+    <div class="border border-primary-brown divide-y divide-primary-brown reveal">
       <Aktuelt title="Ny kampagne: Du behøver ikke være perfekt for at gøre en forskel." href="https://www.girltalk.dk/om-os/nyheder/staerkere-voksne-staerkere-unge/" text="GirlTalk lancerer kampagnen “Stærkere voksne, stærkere unge” for at styrke forældre og andre nære voksne i troen på, at de gør en forskel – også når de ikke har alle svar." date="24 juni 2025" image="/aktuelt1.png" />
 
       <Aktuelt title='Ny podcast til voksne: "Mit yngre jeg" er ude nu.' href="https://www.girltalk.dk/om-os/nyheder/ny-podcast-mit-yngre-jeg/" text='I dag sker det endelig - Første afsnit af podcast-serien "Mit Yngre Jeg" er ude nu! Vi udgiver podcasten i samarbejde med alt for damerne, og serien er en vigtig del af GirlTalks nye indsats målrettet forældre og andre nære voksne. ' date="11 juni 2025" image="/aktuelt2.png" reverse />
@@ -84,7 +84,7 @@ import Aktuelt from "../components/Aktuelt.astro";
       <Aktuelt title="Sara Grünewald er ny ambassadør i GirlTalk" href="https://www.girltalk.dk/om-os/nyheder/sarah-gruenewald-er-ny-ambassadoer-for-girltalk/" text="Sara Grünewald er ny ambassadør i GirlTalk. I dette interview fortæller hun, hvorfor hun har valgt at takke ja og hvordan hun i sin ungdom selv kunne have haft brug for nogen at tale med. " date="10 juni 2025" image="/aktuelt3.png" />
     </div>
     <!-- cards m. knap-->
-    <section class="grid md:grid-cols-3 pt-20">
+    <section class="grid md:grid-cols-3 pt-20 reveal">
       <Forside_card2 title="BEKYMRET FOR EN UNG I DIT LIV?" text="Vi tilbyder rådgivning og sparring til forældre og unges andre nære voksne.">
         <Button as="a" href="https://www.girltalk.dk/vores-tilbud/til-foraeldre-og-naere-voksne/" variant="dark" size="small"> LÆS MERE </Button>
       </Forside_card2>
@@ -96,13 +96,16 @@ import Aktuelt from "../components/Aktuelt.astro";
       </Forside_card2>
     </section>
     <!-- shop-->
-    <section class="pb-10">
-      <div class="flex items-start justify-between pt-70 px-4 relative overflow-hidden">
-        <Heading size="h4" stylingclasses="text-brown pl-4">SHOP OG STØT</Heading>
-        <Button as="a" href="https://shop.girltalk.dk/password" stylingclasses="mt-10 justify-self-end w-fit">SHOP</Button>
+    <section class="pb-10 reveal">
+      <div class="flex items-start justify-between px-4 relative overflow-hidden">
+        <Heading size="h4" stylingclasses="text-brown pt-70 pl-4">SHOP OG STØT</Heading>
         <img src="/stjerne_forside.svg" alt="Stjerne" class="absolute w-40 md:w-70 md:top-10 md:right-315 top-20 right-102 rotate-40" />
         <img src="/stjerne_forside.svg" alt="Stjerne" class="absolute w-70 md:w-110 rotate-90 left-70 md:left-240 -top-30 md:-top-40" />
+        <div class="pt-68 pr-2 md:pr-12 md:pt-78">
+          <Button as="a" href="https://shop.girltalk.dk/password" stylingclasses="justify-self-end w-fit">SHOP</Button>
+        </div>
       </div>
+
       <div class="grid grid-cols-2 md:grid-cols-4">
         <Shop image="/shop1.png" title="Heart Shopper" price="149,00 DKK" href="/shop/heart-shopper" />
         <Shop image="/shop2.png" title="SØSTERSKAB af Thift Thyrring" price="149,00 DKK" href="/shop/soesterskab" />
