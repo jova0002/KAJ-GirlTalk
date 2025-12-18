@@ -28,7 +28,7 @@ import Aktuelt from "../components/Aktuelt.astro";
           <!-- Knapper -->
           <div class="grid grid-cols-2 mt-8 justify-items-start pl-4">
             <Button as="a" href="/Frivilig" variant="pink" class="w-fit" size="small">BLIV FRIVILLIG</Button>
-            <Button href="#footer" stylingclasses="mt-8">KONTAKT OS HER</Button>
+            <Button as="a" href="#footer" stylingclasses="mt-8">KONTAKT OS HER</Button>
           </div>
         </div>
         <div>
@@ -40,11 +40,11 @@ import Aktuelt from "../components/Aktuelt.astro";
       <div class="md:grid md:grid-cols-2">
         <div class="order-1 md:order-2">
           <div class="p-4 md:pt-40">
-            <Heading size="h2" stylingclasses="pb-4 md:pr-8">ER DU KLAR TIL AT LYTTE, NÅR EN PIGE HAR BRUG FOR DET?</Heading>
-            <Heading size="pstor" stylingclasses="md:pr-8">Bliv frivillig i GirlTalk og gør en reel forskel for piger, der har brug for nogen til at lytte. Vi kæmper for unges trivsel og for, at ingen skal stå alene med det svære. Som frivillig bliver du en del af et stærkt fællesskab, udvikler dig fagligt og oplever, hvor meget det betyder at være der for andre. </Heading>
+            <Heading size="h2" stylingclasses="pb-4 text-brown md:pr-8">ER DU KLAR TIL AT LYTTE, NÅR EN PIGE HAR BRUG FOR DET?</Heading>
+            <Heading size="pstor" stylingclasses="md:pr-8 text-brown">Bliv frivillig i GirlTalk og gør en reel forskel for piger, der har brug for nogen til at lytte. Vi kæmper for unges trivsel og for, at ingen skal stå alene med det svære. Som frivillig bliver du en del af et stærkt fællesskab, udvikler dig fagligt og oplever, hvor meget det betyder at være der for andre. </Heading>
           </div>
           <!-- Knap -->
-          <Button href="/kontakt" stylingclasses="mt-8">MØD GIRLTALK</Button>
+          <Button as="a" href="/Omos" stylingclasses="mt-8">MØD GIRLTALK</Button>
         </div>
         <!-- billede 2 -->
         <div>
@@ -55,10 +55,10 @@ import Aktuelt from "../components/Aktuelt.astro";
       <div class="p-4 space-y-20 md:p-20 relative pb-30 overflow-hidden">
         <div class="max-w-85 md:max-w-200">
           <img src="/forside_quote.svg" alt="" class="w-15 md:w-30" />
-          <Heading size="pstor" stylingclasses="md:p-15">At være frivillig i GirlTalk har givet mig et fællesskab, jeg ikke vidste, jeg manglede</Heading>
+          <Heading size="pstor" stylingclasses="text-brown md:p-15">At være frivillig i GirlTalk har givet mig et fællesskab, jeg ikke vidste, jeg manglede</Heading>
         </div>
         <div class="ml-auto md:max-w-220 text-right">
-          <Heading size="pstor" stylingclasses="md:p-15">Det bedste er at mærke, at jeg faktisk gør en forskel for nogen</Heading>
+          <Heading size="pstor" stylingclasses="text-brown md:p-15">Det bedste er at mærke, at jeg faktisk gør en forskel for nogen</Heading>
           <img src=" forside_quote.svg" alt="" class="rotate-180 w-15 mt-4 ml-auto md:w-30" />
           <img src="/stjerne_forside.svg" alt="" class="absolute w-90 rotate-90 top-45 right-65 md:w-150 md:top-90 md:right-265" />
         </div>
@@ -67,39 +67,39 @@ import Aktuelt from "../components/Aktuelt.astro";
     <!-- cards -->
     <section class="grid md:grid-cols-3">
       <img src="/forside_3.png" alt="" class="w-full order-0 md:order-2" />
-      <Forside_card1 title="HAR DIN DATTER BRUG FOR ET TRYGT FÆLLESSKAB?" text="I GirlTalks fællesskaber mødes piger og deler tanker, tvivl og usikkerheder, og sammen finder de modet til at åbne op. Vi starter nye fællesskaber for 13-16 årige piger, i efteråret. Her får din datter et trygt rum, hvor hun kan spejle sig i andre og opleve, at hun ikke er alene." linkText="Læs mere om kampagnen" href="/kampagne" variant="arrow" />
+      <Forside_card1 title="HAR DIN DATTER BRUG FOR ET TRYGT FÆLLESSKAB?" text="I GirlTalks fællesskaber mødes piger og deler tanker, tvivl og usikkerheder, og sammen finder de modet til at åbne op. Vi starter nye fællesskaber for 13-16 årige piger, i efteråret. Her får din datter et trygt rum, hvor hun kan spejle sig i andre og opleve, at hun ikke er alene." linkText="Læs mere om kampagnen" href="https://www.girltalk.dk/andet/staerkere-voksne-staerkere-unge/" variant="arrow" />
 
-      <Forside_card1 title="STÆRKERE VOKSNE, STÆRKERE UNGE" text="Du skal ikke være perfekt, for at gøre en forskel. Med podcast, foredrag og rådgivning støtter vi dig, der har en ung i dit liv og gerne vil være der, også når det er svært." linkText="Find os på Spotify" href="https://open.spotify.com/" variant="spotify" />
+      <Forside_card1 title="STÆRKERE VOKSNE, STÆRKERE UNGE" text="Du skal ikke være perfekt, for at gøre en forskel. Med podcast, foredrag og rådgivning støtter vi dig, der har en ung i dit liv og gerne vil være der, også når det er svært." linkText="Find os på Spotify" href="https://open.spotify.com/show/15oq5yztN1NwZjQn4HIMLg?si=2041342865dd449f&nd=1&dlsi=ddae7b0c28a247a5" variant="spotify" />
     </section>
     <!-- Aktuelt-->
     <div class="relative">
-      <Heading size="h4" stylingclasses="flex justify-end pt-25 pr-4 pb-5">AKTUELT</Heading>
+      <Heading size="h4" stylingclasses="flex text-brown justify-end pt-25 pr-4 pb-5">AKTUELT</Heading>
       <img src="/stjerne_forside.svg" alt="" class="absolute w-30 top-15 left-58 md:w-70 md:left-190 md:top-2" />
     </div>
     <div class="border border-primary-brown divide-y divide-primary-brown">
-      <Aktuelt title="Ny kampagne: Du behøver ikke være perfekt for at gøre en forskel." text="GirlTalk lancerer kampagnen “Stærkere voksne, stærkere unge” for at styrke forældre og andre nære voksne i troen på, at de gør en forskel – også når de ikke har alle svar." date="24 juni 2025" image="/aktuelt1.png" />
+      <Aktuelt title="Ny kampagne: Du behøver ikke være perfekt for at gøre en forskel." href="https://www.girltalk.dk/om-os/nyheder/staerkere-voksne-staerkere-unge/" text="GirlTalk lancerer kampagnen “Stærkere voksne, stærkere unge” for at styrke forældre og andre nære voksne i troen på, at de gør en forskel – også når de ikke har alle svar." date="24 juni 2025" image="/aktuelt1.png" />
 
-      <Aktuelt title='Ny podcast til voksne: "Mit yngre jeg" er ude nu.' text='I dag sker det endelig - Første afsnit af podcast-serien "Mit Yngre Jeg" er ude nu! Vi udgiver podcasten i samarbejde med alt for damerne, og serien er en vigtig del af GirlTalks nye indsats målrettet forældre og andre nære voksne. ' date="11 juni 2025" image="/aktuelt2.png" reverse />
+      <Aktuelt title='Ny podcast til voksne: "Mit yngre jeg" er ude nu.' href="https://www.girltalk.dk/om-os/nyheder/ny-podcast-mit-yngre-jeg/" text='I dag sker det endelig - Første afsnit af podcast-serien "Mit Yngre Jeg" er ude nu! Vi udgiver podcasten i samarbejde med alt for damerne, og serien er en vigtig del af GirlTalks nye indsats målrettet forældre og andre nære voksne. ' date="11 juni 2025" image="/aktuelt2.png" reverse />
 
-      <Aktuelt title="Sara Grünewald er ny ambassadør i GirlTalk" text="Sara Grünewald er ny ambassadør i GirlTalk. I dette interview fortæller hun, hvorfor hun har valgt at takke ja og hvordan hun i sin ungdom selv kunne have haft brug for nogen at tale med. " date="10 juni 2025" image="/aktuelt3.png" />
+      <Aktuelt title="Sara Grünewald er ny ambassadør i GirlTalk" href="https://www.girltalk.dk/om-os/nyheder/sarah-gruenewald-er-ny-ambassadoer-for-girltalk/" text="Sara Grünewald er ny ambassadør i GirlTalk. I dette interview fortæller hun, hvorfor hun har valgt at takke ja og hvordan hun i sin ungdom selv kunne have haft brug for nogen at tale med. " date="10 juni 2025" image="/aktuelt3.png" />
     </div>
     <!-- cards m. knap-->
     <section class="grid md:grid-cols-3 pt-20">
       <Forside_card2 title="BEKYMRET FOR EN UNG I DIT LIV?" text="Vi tilbyder rådgivning og sparring til forældre og unges andre nære voksne.">
-        <Button as="a" href="/ansog" variant="dark" size="small"> LÆS MERE </Button>
+        <Button as="a" href="https://www.girltalk.dk/vores-tilbud/til-foraeldre-og-naere-voksne/" variant="dark" size="small"> LÆS MERE </Button>
       </Forside_card2>
       <Forside_card2 title="BRUG FOR VIDEN OM UNGDOMSLIV?" text="Vi holder foredrag og workshops for unge og andre med interesse i unges trivsel.">
-        <Button as="a" href="/ansog" variant="dark" size="small"> LÆS MERE </Button>
+        <Button as="a" href="https://www.girltalk.dk/vores-tilbud/foredrag-og-workshops/" variant="dark" size="small"> LÆS MERE </Button>
       </Forside_card2>
       <Forside_card2 title="VIL DU HJÆLPE ANDRE UNGE?" text="Så bliv frivillig i GirlTalk. Vi søger løbende frivillige kræfter flere steder i landet.">
-        <Button as="a" href="/ansog" variant="dark" size="small"> LÆS MERE </Button>
+        <Button as="a" href="https://www.girltalk.dk/om-os/bliv-frivillig/vi-har-brug-for-dig/" variant="dark" size="small"> LÆS MERE </Button>
       </Forside_card2>
     </section>
     <!-- shop-->
     <section class="pb-10">
-      <div class="grid grid-cols-2 items-start pt-70 relative overflow-hidden justify-items-start">
-        <Heading size="h4" stylingclasses="pl-4">SHOP OG STØT</Heading>
-        <Button href="/shop" stylingclasses="mt-10 justify-self-end w-fit">SHOP</Button>
+      <div class="flex items-start justify-between pt-70 px-4 relative overflow-hidden">
+        <Heading size="h4" stylingclasses="text-brown pl-4">SHOP OG STØT</Heading>
+        <Button as="a" href="https://shop.girltalk.dk/password" stylingclasses="mt-10 justify-self-end w-fit">SHOP</Button>
         <img src="/stjerne_forside.svg" alt="Stjerne" class="absolute w-40 md:w-70 md:top-10 md:right-315 top-20 right-102 rotate-40" />
         <img src="/stjerne_forside.svg" alt="Stjerne" class="absolute w-70 md:w-110 rotate-90 left-70 md:left-240 -top-30 md:-top-40" />
       </div>

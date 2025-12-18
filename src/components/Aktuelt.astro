@@ -7,6 +7,7 @@ const {
     text = "",
     date = "",
     image = "",
+    href = "#",
     reverse = false, // true = billede til venstre på desktop
 } = Astro.props;
 ---
@@ -18,9 +19,11 @@ const {
 
         <!-- Tekst -->
         <div class={`p-20 pt-30 border-t border-primary-brown md:border-t-0 md:border-l ${reverse ? "md:order-2" : "md:order-1"}`}>
-            <Heading size="h2" stylingclasses="uppercase underline underline-offset-4">
-                {title}
-            </Heading>
+            <a href={href} class="inline-block transition-opacity hover:opacity-70">
+                <Heading size="h2" stylingclasses="uppercase underline underline-offset-4 text-brown hover:opacity-80">
+                    {title}
+                </Heading>
+            </a>
 
             <Text teksttype="brødtekst" stylingclasses="mt-4 pt-15">
                 {text}
