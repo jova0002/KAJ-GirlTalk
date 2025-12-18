@@ -8,10 +8,10 @@ const { image, title, price, href = "#" } = Astro.props;
     <img src={image} alt={title} class="w-full aspect-square object-cover" />
 
     <div class="p-3 border-t border-primary-brown">
-        <Text teksttype="p" class="underline underline-offset-4">
+        <Text teksttype="p" class="underline underline-offset-4 text-brown">
             {title}
         </Text>
-        <Text teksttype="p" class="mt-2">
+        <Text teksttype="p" class="mt-2 text-brown">
             {price}
         </Text>
     </div>
