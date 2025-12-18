@@ -3,10 +3,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Heading from "../components/Heading.astro";
 import Text from "../components/Text.astro";
 import Link from "../components/Link.astro";
-import Footer from "../components/Footer.astro"
 import Button from "../components/Button.astro";
-import Cards from "../components/Cards.astro";
-import Header from "../components/Header.astro";
 import Navbar from "../components/Navbar.astro";
 
 const aarsberetninger = [
@@ -30,43 +27,42 @@ const aarsregnskaber = [
   <main class="bg-[var(--color-primary-beige)] text-[var(--color-primary-brown)]">
 
 
-
 <!-- ================================ HERO ================================ -->
 <section class="bg-[var(--color-primary-beige)] text-[var(--color-primary-brown)]">
-  <div class="mx-auto max-w-6xl px-6 pt-16 pb-12 md:pt-20 md:pb-16">
+  <div class="mx-auto max-w-6xl px-6 pt-12 pb-12 md:pt-20 md:pb-16">
     <div class="grid gap-10 md:grid-cols-2 md:items-center">
+
       <div class="relative order-1 md:order-2">
+        
+        <img src="/stjerne_omos.png" alt="" class="pointer-events-none absolute right-0 top-0 w-28 translate-x-6 -translate-y-4 md:w-82 md:translate-x-24 md:-translate-y-10"/>
 
-        <img src="/stjerne_omos.png" alt="" class="pointer-events-none absolute -right-6 top-0 w-38 md:-right-10 md:top-2 md:w-54"/>
-
-        <div class="pr-20 md:pr-52">
+        <div class="mx-auto max-w-md md:mx-0">
           <div class="text-center md:text-left">
-            <Heading size="h4" stylingclasses="leading-none">OM</Heading>
-            <Heading size="h4" stylingclasses="ml-24 mt-2 pl-14 md:pl-20 leading-none">OS</Heading>
+            <Heading size="h5" stylingclasses="leading-none">OM</Heading>
+            <Heading size="h5" stylingclasses="leading-none mt-4 translate-x-12 md:mt-10 md:translate-x-36">  OS </Heading>
           </div>
 
-          <Text teksttype="brødtekst" stylingclasses="mt-20 max-w-md mx-auto md:mx-0 md:text-left">
+          <Text
+            size="pstor" stylingclasses="mt-8 md:mt-14 max-w-[34ch] mx-auto md:mx-0 text-left" >
             I GirlTalk kæmper vi for unges trivsel og for, at ingen piger skal stå alene med det, der er svært.
           </Text>
 
-          <div class="mt-8 mb-4 flex justify-center md:justify-start">
-            <a
-              href="/kontakt"
-              class="inline-block whitespace-nowrap border-2 border-[var(--color-primary-brown)]
-                     bg-[var(--color-primary-pink)] px-8 py-4 font-bold uppercase tracking-wide
-                     text-[var(--color-primary-brown)]
-                     shadow-[-10px_10px_0_0_var(--color-primary-brown)]
-                     md:px-12"
+          <div class="mt-15 mb-5 flex justify-center md:justify-start">
+            <Button
+              as="a"
+              href="#footer"
+              variant="pink"
+              size="large"
+              class="whitespace-nowrap md:translate-x-16"
             >
               KONTAKT OS HER
-            </a>
+            </Button>
           </div>
         </div>
       </div>
-    
-      <div class="order-2 md:order-1 flex justify-center md:justify-start">
-        <img src="/omos_1.png" alt="GirlTalk fællesskab" class="w-full max-w-[380px]"/>
 
+      <div class="order-2 md:order-1 flex justify-center md:justify-start">
+        <img src="/omos_1.png" alt="GirlTalk fællesskab" class="w-full max-w-[280px] md:max-w-[400px]"/>
       </div>
     </div>
   </div>
@@ -76,15 +72,17 @@ const aarsregnskaber = [
 
 
 
+
 <!-- =============================== VORES VÆRDIER =============================== -->
 <section class="bg-[var(--color-primary-beige)] py-16">
 
   <div class="mx-auto max-w-6xl px-6">
-    <div class="flex items-center justify-center gap-6">
-      <img src="/stjerne_omos.png" alt="" class="w-30" />
-      <Heading size="h4">VORES VÆRDIER</Heading>
-    </div>
+  <div class="flex items-center justify-end gap-6">
+    <img src="/stjerne_omos.png" alt="" class="w-35" />
+    <Heading size="h4">VORES VÆRDIER</Heading>
   </div>
+</div>
+
 
   <div class="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen mt-10">
     <div class="border border-[var(--color-primary-brown)]">
@@ -145,9 +143,9 @@ const aarsregnskaber = [
 
 
 
-
 <!-- ============================= VISION / MISSION ================================= -->
-    <section class="mx-auto max-w-6xl px-6 pb-10">
+
+<section class="mx-auto max-w-6xl px-6 pb-10">
       <div class="relative">
         <img src="/omos_5.png" alt="Vision" class="w-[520px] max-w-full" />
         <img src="/omos_6.png" alt="Mission" class="mt-8 md:-mt-10 md:ml-auto w-[680px] max-w-full" />
@@ -198,8 +196,8 @@ const aarsregnskaber = [
 <!-- =============================== OM GIRLTALK ==================================== -->
 <section class="bg-[var(--color-primary-beige)] py-16">
   <div class="mx-auto max-w-6xl px-6">
-    <div class="flex items-center gap-4 mb-10">
-      <img src="/stjerne_omos.png" alt="" class="w-30" />
+    <div class="flex items-center justify-start gap-4 mb-10">
+      <img src="/stjerne_omos.png" alt="" class="w-35" />
       <Heading size="h4">OM GIRLTALK</Heading>
     </div>
   </div>
@@ -282,9 +280,9 @@ const aarsregnskaber = [
 
  <!-- ============================== RAPPORTER FOR INDSATSER ========================= -->
 <section class="mx-auto max-w-6xl px-6 py-16">
-  <div class="flex items-center justify-between gap-6">
-    <Heading size="h4">RAPPORTER FOR INDSATSER</Heading>
-    <img src="/stjerne_omos.png" alt="" class="w-30" />
+  <div class="flex items-center justify-start gap-6">
+    <Heading size="h4">INDSATS RAPPORTER</Heading>
+    <img src="/stjerne_omos.png" alt="" class="w-35" />
   </div>
 
 
