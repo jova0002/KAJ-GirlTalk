@@ -1,37 +1,37 @@
 ---
-import Heading from "../components/Heading.astro";
-import Text from "../components/Text.astro";
+import Heading from "./Heading.astro";
+import Text from "./Text.astro";
 
-const {
-    title = "",
-    text = "",
-    date = "",
-    image = "",
-    href = "#",
-    reverse = false, // true = billede til venstre på desktop
-} = Astro.props;
+const { title = "", text = "", date = "", image = "", href = "", reverse = false } = Astro.props;
 ---
 
-<article class="bg-primary-beige">
-    <div class="md:grid md:grid-cols-2 md:items-stretch">
-        <!-- Billede -->
-        <img src={image} alt="" class={`w-full h-full object-cover ${reverse ? "md:order-1" : "md:order-2"}`} />
+<article class="bg-[var(--color-primary-beige)]">
+  <div class="grid grid-cols-1 md:grid-cols-2 items-stretch">
+    <!-- IMAGE -->
+    <img src={image} alt="" class={`w-full h-full object-cover ${reverse ? "md:order-1" : "md:order-2"}`} />
 
-        <!-- Tekst -->
-        <div class={`p-20 pt-30 border-t border-primary-brown md:border-t-0 md:border-l ${reverse ? "md:order-2" : "md:order-1"}`}>
-            <a href={href} class="inline-block transition-opacity hover:opacity-70">
-                <Heading size="h2" stylingclasses="uppercase underline underline-offset-4 text-brown hover:opacity-80">
-                    {title}
-                </Heading>
-            </a>
+    <!-- TEXT -->
+    <div
+      class={`
+        p-20 pt-30 text-brown
+        ${reverse ? "md:order-2 md:border-l" : "md:order-1 md:border-r"}
+        border-[var(--color-primary-brown)]
+        border-t md:border-t-0
+      `}
+    >
+      <a href={href} class="inline-block hover:opacity-80 transition-opacity">
+        <Heading size="h2" stylingclasses="uppercase underline underline-offset-4">
+          {title}
+        </Heading>
+      </a>
 
-            <Text teksttype="brødtekst" stylingclasses="mt-4 pt-15">
-                {text}
-            </Text>
+      <Text teksttype="brødtekst" stylingclasses="mt-6">
+        {text}
+      </Text>
 
-            <Text teksttype="brødtekst" stylingclasses="mt-6">
-                {date}
-            </Text>
-        </div>
+      <Text teksttype="brødtekst" stylingclasses="mt-6">
+        {date}
+      </Text>
     </div>
+  </div>
 </article>
