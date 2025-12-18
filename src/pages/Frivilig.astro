@@ -3,13 +3,12 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Heading from "../components/Heading.astro";
 import Text from "../components/Text.astro";
 import Button from "../components/Button.astro";
-import Navbar from "../components/Navbar.astro";
 ---
 
 <MainLayout>
   <main class="bg-[var(--color-primary-beige)]">
     <!-- ================= HERO SECTION ================= -->
-    <section class="relative bg-[var(--color-primary-beige)] h-[100vh] min-h-[820px] overflow-hidden md:block">
+    <section class="relative reveal bg-[var(--color-primary-beige)] h-[100vh] min-h-[820px] overflow-hidden md:block">
       <!-- STAR -->
       <img src="/stjerne_forside.svg" alt="" class="absolute top-2 left-70 w-30 md:top-20 md:left-260 lg:w-50" />
 
@@ -23,17 +22,17 @@ import Navbar from "../components/Navbar.astro";
     </section>
 
     <!-- BUTTON -->
-    <div class="absolute top-195 left-4 md:top-140 md:left-200">
+    <div class="absolute top-195 left-4 md:top-140 md:left-200 reveal">
       <Button as="a" href="#ansog" variant="pink" size="large">ANSØG HER</Button>
     </div>
 
     <!-- LEFT CONTENT -->
     <div class="pb-10 md:pb-0 mt-10 md:mt-15">
-      <div class="absolute left-60 top-80 md:left-30 md:top-80 max-w-md">
+      <div class="absolute left-60 top-80 md:left-30 md:top-80 max-w-md reveal">
         <img src="/girls_together.webp" alt="Girls together" class="mb-10 h-50 w-60 md:h-80 md:w-100" />
       </div>
 
-      <div class="absolute pl-4 pr-20 top-140 md:pl-80 md:pr-0 md:top-180">
+      <div class="absolute pl-4 pr-20 top-140 md:pl-80 md:pr-0 md:top-180 reveal">
         <Heading size="h2" htmlheading="h2" stylingclasses="text-[var(--color-primary-brown)]"> ØNSKER DU AT BLIVE FRIVILLIG HOS OS? </Heading>
 
         <Heading size="pstor" htmlheading="h2" stylingclasses="pt-5 pr-15 md:pt-5 md:pr-10 lg:pr-100 text-[var(--color-primary-brown)]"> Rigtig mange piger og unge kvinder har brug for vores hjælp. Derfor har vi brug for flere frivillige. </Heading>
@@ -42,7 +41,7 @@ import Navbar from "../components/Navbar.astro";
 
     <!-- ================= Text Section ================= -->
 
-    <section class="bg-[var(--color-primary-beige)]">
+    <section class="bg-[var(--color-primary-beige)] reveal">
       <!-- FULL WIDTH WRAPPER -->
       <div class="w-full">
         <!-- BORDER + GRID -->
@@ -77,7 +76,7 @@ import Navbar from "../components/Navbar.astro";
     </section>
 
     <!-- ================= FORM HEADING SECTION ================= -->
-    <section id="ansog" class="relative bg-[var(--color-primary-beige)] overflow-hidden">
+    <section id="ansog" class="relative reveal bg-[var(--color-primary-beige)] overflow-hidden">
       <!-- RIGHT STAR -->
       <img src="/stjerne_forside.svg" alt="" aria-hidden="true" class="absolute left-85 -top-22 w-60 md:w-120 md:left-280
            md:-top-40 pointer-events-none" />
@@ -96,7 +95,7 @@ import Navbar from "../components/Navbar.astro";
 
     <!-- ================= FORM SECTION ================= -->
 
-    <section class="bg-[var(--color-primary-beige)]">
+    <section class="bg-[var(--color-primary-beige)] reveal">
       <div class="w-full flex justify-center border border-[var(--color-primary-brown)]">
         <!-- FORM WRAPPER -->
         <form class="w-full max-w-3xl
@@ -214,7 +213,7 @@ import Navbar from "../components/Navbar.astro";
 
     <!-- ================= Text Section ================= -->
 
-    <section class="bg-[var(--color-primary-beige)]">
+    <section class="bg-[var(--color-primary-beige)] reveal">
       <!-- FULL WIDTH WRAPPER -->
       <div class="w-full">
         <!-- BORDER + GRID -->
