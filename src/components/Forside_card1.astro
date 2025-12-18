@@ -1,4 +1,6 @@
 ---
+import Heading from "../components/Heading.astro";
+import Text from "../components/Text.astro";
 const {
     title = "",
     text = "",
@@ -8,23 +10,23 @@ const {
 } = Astro.props;
 ---
 
-<article class="bg-primary-brown text-base-100 p-10 flex flex-col justify-between min-h-[520px] border border-base-100/20">
+<article class="bg-primary-brown p-10 flex flex-col justify-between min-h-[500px] border border-primary-beige">
     <div>
-        <h2 class="text-4xl md:text-5xl font-extrabold uppercase leading-tight">
+        <Heading size="h3" stylingclasses="text-primary-beige">
             {title}
-        </h2>
+        </Heading>
 
-        <p class="mt-8 text-lg leading-relaxed opacity-90">
+        <Text teksttype="brødtekst" stylingclasses="mt-6 text-primary-beige">
             {text}
-        </p>
+        </Text>
     </div>
 
-    <a href={href} class="mt-12 inline-flex items-end justify-between gap-6 uppercase tracking-wide border-b border-current w-full pb-2">
-        <span>{linkText}</span>
+    <a href={href} class="mt-12 text-primary-beige inline-flex items-end justify-between gap-6 uppercase tracking-wide pb-2">
+        <span class="border-b">{linkText}</span>
 
         {
             variant === "spotify" ? (
-                <img src="/spotify.svg" alt="Spotify" class="w-10 h-10" />
+                <img src="/spotify1.svg" alt="Spotify" class="w-10 h-10" />
             ) : (
                 <span aria-hidden="true" class="text-4xl leading-none">
                     →

@@ -1,0 +1,18 @@
+---
+import Heading from "../components/Heading.astro";
+import Text from "../components/Text.astro";
+const { image, title, price, href = "#" } = Astro.props;
+---
+
+<a href={href} class="block border border-primary-brown bg-primary-beige">
+    <img src={image} alt={title} class="w-full aspect-square object-cover" />
+
+    <div class="p-3 border-t border-primary-brown">
+        <Text teksttype="p" class="underline underline-offset-4">
+            {title}
+        </Text>
+        <Text teksttype="p" class="mt-2">
+            {price}
+        </Text>
+    </div>
+</a>

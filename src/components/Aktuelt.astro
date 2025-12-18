@@ -1,0 +1,34 @@
+---
+import Heading from "../components/Heading.astro";
+import Text from "../components/Text.astro";
+
+const {
+    title = "",
+    text = "",
+    date = "",
+    image = "",
+    reverse = false, // true = billede til venstre på desktop
+} = Astro.props;
+---
+
+<article class="bg-primary-beige">
+    <div class="md:grid md:grid-cols-2 md:items-stretch">
+        <!-- Billede -->
+        <img src={image} alt="" class={`w-full h-full object-cover ${reverse ? "md:order-1" : "md:order-2"}`} />
+
+        <!-- Tekst -->
+        <div class={`p-20 pt-30 ${reverse ? "hide:border md:order-2" : "md:order-1"}`}>
+            <Heading size="h2" stylingclasses="uppercase underline underline-offset-4">
+                {title}
+            </Heading>
+
+            <Text teksttype="brødtekst" stylingclasses="mt-4 pt-15">
+                {text}
+            </Text>
+
+            <Text teksttype="brødtekst" stylingclasses="mt-6">
+                {date}
+            </Text>
+        </div>
+    </div>
+</article>
