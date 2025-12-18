@@ -12,13 +12,13 @@ const { title = "", text = "" } = Astro.props;
             {title}
         </Heading>
 
-        <Text teksttype="brødtekst" stylingclasses="mt-6 text-primary-beige opacity-90 leading-relaxed">
+        <Text teksttype="brødtekst" stylingclasses="mt-6 text-beige opacity-90 leading-relaxed">
             {text}
         </Text>
     </div>
 
     <!-- CTA-slot (knappen kommer udefra) -->
-    <div class="mt-10 flex justify-end md:justify-center">
+    <div class="mt-10 flex justify-end">
         <slot />
     </div>
 </article>
