@@ -21,307 +21,204 @@ const aarsregnskaber = [
 ];
 ---
 
-
-
 <MainLayout title="Om os">
   <main class="bg-[var(--color-primary-beige)] text-[var(--color-primary-brown)]">
+    <!-- ================================ HERO ================================ -->
+    <section class="bg-[var(--color-primary-beige)] text-[var(--color-primary-brown)] reveal">
+      <div class="mx-auto max-w-6xl px-6 pt-12 pb-12 md:pt-20 md:pb-16">
+        <div class="grid gap-10 md:grid-cols-2 md:items-center">
+          <div class="relative order-1 md:order-2">
+            <img src="/stjerne_omos.png" alt="" class="pointer-events-none absolute right-0 top-0 w-28 translate-x-6 -translate-y-4 md:w-82 md:translate-x-24 md:-translate-y-10" />
 
+            <div class="mx-auto max-w-md md:mx-0">
+              <div class="text-center md:text-left">
+                <Heading size="h5" stylingclasses="leading-none">OM</Heading>
+                <Heading size="h5" stylingclasses="leading-none mt-4 translate-x-12 md:mt-10 md:translate-x-36"> OS </Heading>
+              </div>
 
-<!-- ================================ HERO ================================ -->
-<section class="bg-[var(--color-primary-beige)] text-[var(--color-primary-brown)]">
-  <div class="mx-auto max-w-6xl px-6 pt-12 pb-12 md:pt-20 md:pb-16">
-    <div class="grid gap-10 md:grid-cols-2 md:items-center">
+              <Text size="pstor" stylingclasses="mt-8 md:mt-14 max-w-[34ch] mx-auto md:mx-0 text-left"> I GirlTalk kæmper vi for unges trivsel og for, at ingen piger skal stå alene med det, der er svært. </Text>
 
-      <div class="relative order-1 md:order-2">
-        
-        <img src="/stjerne_omos.png" alt="" class="pointer-events-none absolute right-0 top-0 w-28 translate-x-6 -translate-y-4 md:w-82 md:translate-x-24 md:-translate-y-10"/>
-
-        <div class="mx-auto max-w-md md:mx-0">
-          <div class="text-center md:text-left">
-            <Heading size="h5" stylingclasses="leading-none">OM</Heading>
-            <Heading size="h5" stylingclasses="leading-none mt-4 translate-x-12 md:mt-10 md:translate-x-36">  OS </Heading>
+              <div class="mt-15 mb-5 flex justify-center md:justify-start">
+                <Button as="a" href="#footer" variant="pink" size="large" class="whitespace-nowrap md:translate-x-16"> KONTAKT OS HER </Button>
+              </div>
+            </div>
           </div>
 
-          <Text
-            size="pstor" stylingclasses="mt-8 md:mt-14 max-w-[34ch] mx-auto md:mx-0 text-left" >
-            I GirlTalk kæmper vi for unges trivsel og for, at ingen piger skal stå alene med det, der er svært.
-          </Text>
-
-          <div class="mt-15 mb-5 flex justify-center md:justify-start">
-            <Button
-              as="a"
-              href="#footer"
-              variant="pink"
-              size="large"
-              class="whitespace-nowrap md:translate-x-16"
-            >
-              KONTAKT OS HER
-            </Button>
+          <div class="order-2 md:order-1 flex justify-center md:justify-start">
+            <img src="/omos_1.png" alt="GirlTalk fællesskab" class="w-full max-w-[280px] md:max-w-[400px]" />
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="order-2 md:order-1 flex justify-center md:justify-start">
-        <img src="/omos_1.png" alt="GirlTalk fællesskab" class="w-full max-w-[280px] md:max-w-[400px]"/>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-
-<!-- =============================== VORES VÆRDIER =============================== -->
-<section class="bg-[var(--color-primary-beige)] py-16">
-
-  <div class="mx-auto max-w-6xl px-6">
-  <div class="flex items-center justify-end gap-6">
-    <img src="/stjerne_omos.png" alt="" class="w-35" />
-    <Heading size="h4">VORES VÆRDIER</Heading>
-  </div>
-</div>
-
-
-  <div class="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen mt-10">
-    <div class="border border-[var(--color-primary-brown)]">
-
-      <!-- ALLE HAR BRUG FOR EN AT TALE MED -->
-      <div class="grid md:grid-cols-2 border-b border-[var(--color-primary-brown)] min-h-[420px]">
-        <div class="order-1 md:order-2 border-b md:border-b-0 md:border-l border-[var(--color-primary-brown)]">
-          <img src="/omos_2.png" alt="" class="h-full w-full object-cover" />
-        </div>
-
-        <div class="order-2 md:order-1 p-10 flex flex-col justify-center">
-          <Heading size="h2">ALLE HAR BRUG FOR EN AT TALE MED</Heading>
-          <Text teksttype="brødtekst" stylingclasses="mt-4 leading-relaxed max-w-prose">
-            Enhver person har brug for et menneske i deres liv, som er nærværende og lytter.
-            Men det kan være svært at tale med de mennesker, du er tættest på i dagligdagen.
-            GirlTalk giver derfor mulighed for at tale med andre om de ting i livet, der kan være
-            svære at dele med andre.
-          </Text>
+    <!-- =============================== VORES VÆRDIER =============================== -->
+    <section class="bg-[var(--color-primary-beige)] py-16">
+      <div class="mx-auto max-w-6xl px-6 reveal">
+        <div class="flex items-center justify-end gap-6">
+          <img src="/stjerne_omos.png" alt="" class="w-35" />
+          <Heading size="h4">VORES VÆRDIER</Heading>
         </div>
       </div>
 
-      <!-- SISTERHOOD -->
-      <div class="grid md:grid-cols-2 border-b border-[var(--color-primary-brown)] min-h-[420px]">
-        <div class="order-1 border-b md:border-b-0 md:border-r border-[var(--color-primary-brown)]">
-          <img src="/omos_3.png" alt="" class="h-full w-full object-cover" />
-        </div>
+      <div class="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen mt-10 reveal">
+        <div class="border border-[var(--color-primary-brown)]">
+          <!-- ALLE HAR BRUG FOR EN AT TALE MED -->
+          <div class="grid md:grid-cols-2 border-b border-[var(--color-primary-brown)] min-h-[420px]">
+            <div class="order-1 md:order-2 border-b md:border-b-0 md:border-l border-[var(--color-primary-brown)]">
+              <img src="/omos_2.png" alt="" class="h-full w-full object-cover" />
+            </div>
 
-        <div class="order-2 p-10 flex flex-col justify-center">
-          <Heading size="h2">SISTERHOOD</Heading>
-          <Text teksttype="brødtekst" stylingclasses="mt-4 leading-relaxed max-w-prose">
-            I ordet Sisterhood er der en stærk gensidighed. Det vil sige, at det man ønsker,
-            er også det, man selv giver. Med andre ord: Retten til at være den man er og respekten
-            for at andre er, som de er. Det sker via omsorg, respekt og mod.
-          </Text>
+            <div class="order-2 md:order-1 p-10 flex flex-col justify-center">
+              <Heading size="h2">ALLE HAR BRUG FOR EN AT TALE MED</Heading>
+              <Text teksttype="brødtekst" stylingclasses="mt-4 leading-relaxed max-w-prose"> Enhver person har brug for et menneske i deres liv, som er nærværende og lytter. Men det kan være svært at tale med de mennesker, du er tættest på i dagligdagen. GirlTalk giver derfor mulighed for at tale med andre om de ting i livet, der kan være svære at dele med andre. </Text>
+            </div>
+          </div>
+
+          <!-- SISTERHOOD -->
+          <div class="grid md:grid-cols-2 border-b border-[var(--color-primary-brown)] min-h-[420px]">
+            <div class="order-1 border-b md:border-b-0 md:border-r border-[var(--color-primary-brown)]">
+              <img src="/omos_3.png" alt="" class="h-full w-full object-cover" />
+            </div>
+
+            <div class="order-2 p-10 flex flex-col justify-center">
+              <Heading size="h2">SISTERHOOD</Heading>
+              <Text teksttype="brødtekst" stylingclasses="mt-4 leading-relaxed max-w-prose"> I ordet Sisterhood er der en stærk gensidighed. Det vil sige, at det man ønsker, er også det, man selv giver. Med andre ord: Retten til at være den man er og respekten for at andre er, som de er. Det sker via omsorg, respekt og mod. </Text>
+            </div>
+          </div>
+
+          <!-- DU ER VÆRDIFULD -->
+          <div class="grid md:grid-cols-2 min-h-[420px]">
+            <div class="order-1 md:order-2 border-b md:border-b-0 md:border-l border-[var(--color-primary-brown)]">
+              <img src="/omos_4.png" alt="" class="h-full w-full object-cover" />
+            </div>
+
+            <div class="order-2 md:order-1 p-10 flex flex-col justify-center">
+              <Heading size="h2">DU ER VÆRDIFULD</Heading>
+              <Text teksttype="brødtekst" stylingclasses="mt-4 leading-relaxed max-w-prose"> Alle piger uanset etnicitet, seksualitet, religiøs overbevisning eller nationalitet har værdi. GirlTalk støtter piger i at se de ressourcer og talenter, de er i besiddelse af, og til at folde deres potentiale fuldt ud. </Text>
+            </div>
+          </div>
         </div>
       </div>
+    </section>
 
-      <!-- DU ER VÆRDIFULD -->
-      <div class="grid md:grid-cols-2 min-h-[420px]">
-        <div class="order-1 md:order-2 border-b md:border-b-0 md:border-l border-[var(--color-primary-brown)]">
-          <img src="/omos_4.png" alt="" class="h-full w-full object-cover" />
-        </div>
+    <!-- ============================= VISION / MISSION ================================= -->
 
-        <div class="order-2 md:order-1 p-10 flex flex-col justify-center">
-          <Heading size="h2">DU ER VÆRDIFULD</Heading>
-          <Text teksttype="brødtekst" stylingclasses="mt-4 leading-relaxed max-w-prose">
-            Alle piger uanset etnicitet, seksualitet, religiøs overbevisning eller nationalitet har
-            værdi. GirlTalk støtter piger i at se de ressourcer og talenter, de er i besiddelse af,
-            og til at folde deres potentiale fuldt ud.
-          </Text>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-
-
-<!-- ============================= VISION / MISSION ================================= -->
-
-<section class="mx-auto max-w-6xl px-6 pb-10">
+    <section class="mx-auto max-w-6xl px-6 pb-10 reveal">
       <div class="relative">
         <img src="/omos_5.png" alt="Vision" class="w-[520px] max-w-full" />
         <img src="/omos_6.png" alt="Mission" class="mt-8 md:-mt-10 md:ml-auto w-[680px] max-w-full" />
       </div>
     </section>
 
+    <!-- =========================== FUNDAMENT / FRIVILLIGHED =========================== -->
+    <section class="bg-[var(--color-primary-beige)] py-16 reveal">
+      <div class="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen">
+        <div class="grid border border-[var(--color-primary-brown)] md:grid-cols-2">
+          <div class="p-8 md:p-10 border-b border-[var(--color-primary-brown)] md:border-b-0 md:border-r">
+            <Heading size="h2">VORES FUNDAMENT</Heading>
+            <Text teksttype="brødtekst" stylingclasses="mt-4 leading-relaxed"> GirlTalk bygger på et stærkt socialfagligt fundament. De frivillige får undervisning, supervision og uddannelse, der sikrer, at de alle er kompetente til at arbejde med de unge piger. Alt arbejdet i GirlTalk er gennemsyret af en ydmyghed for vores evner og vores begrænsninger i forhold til den enkelte pige, og det er en vigtig værdi for GirlTalk at have integritet, gennemsigtighed og ordentlighed i alt, hvad vi gør. </Text>
+          </div>
 
-
-
-
-<!-- =========================== FUNDAMENT / FRIVILLIGHED =========================== -->
-<section class="bg-[var(--color-primary-beige)] py-16">
-  <div class="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen">
-    <div class="grid border border-[var(--color-primary-brown)] md:grid-cols-2">
-
-      <div class="p-8 md:p-10 border-b border-[var(--color-primary-brown)] md:border-b-0 md:border-r">
-        <Heading size="h2">VORES FUNDAMENT</Heading>
-        <Text teksttype="brødtekst" stylingclasses="mt-4 leading-relaxed">
-          GirlTalk bygger på et stærkt socialfagligt fundament. De frivillige får undervisning,
-          supervision og uddannelse, der sikrer, at de alle er kompetente til at arbejde med de unge piger.
-          Alt arbejdet i GirlTalk er gennemsyret af en ydmyghed for vores evner og vores begrænsninger i
-          forhold til den enkelte pige, og det er en vigtig værdi for GirlTalk at have integritet,
-          gennemsigtighed og ordentlighed i alt, hvad vi gør.
-        </Text>
+          <div class="p-8 md:p-10">
+            <Heading size="h2">DREVET AF FRIVILLIGHED</Heading>
+            <Text teksttype="brødtekst" stylingclasses="mt-4 leading-relaxed"> GirlTalk er en organisation baseret på frivillighed og engagement. Det er en værdi for os at engagere os i hinanden og gøre en forskel på frivillig basis. Vores frivillige hjælper og rådgiver, fordi de har lyst til det. Ikke fordi de bliver betalt for det. Der er cirka 300 frivillige tilknyttet i GirlTalk, og vi har frivillige engageret i alle dele af vores arbejde: Fra bestyrelse, advisoryboard og ambassadører til frivillige i vores forældre- og ungerettede indsatser. Vi lægger stor vægt på at have et omfattende sikkerhedsnet for vores frivillige i form af sparring, fællesskab, introforløb, uddannelse, supervision og trivselssamtaler. </Text>
+          </div>
+        </div>
       </div>
-
-      <div class="p-8 md:p-10">
-        <Heading size="h2">DREVET AF FRIVILLIGHED</Heading>
-        <Text teksttype="brødtekst" stylingclasses="mt-4 leading-relaxed">
-          GirlTalk er en organisation baseret på frivillighed og engagement. Det er en værdi for os at
-          engagere os i hinanden og gøre en forskel på frivillig basis. Vores frivillige hjælper og rådgiver,
-          fordi de har lyst til det. Ikke fordi de bliver betalt for det. Der er cirka 300 frivillige
-          tilknyttet i GirlTalk, og vi har frivillige engageret i alle dele af vores arbejde: Fra bestyrelse,
-          advisoryboard og ambassadører til frivillige i vores forældre- og ungerettede indsatser. Vi lægger
-          stor vægt på at have et omfattende sikkerhedsnet for vores frivillige i form af sparring,
-          fællesskab, introforløb, uddannelse, supervision og trivselssamtaler.
-        </Text>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-
-
-
-<!-- =============================== OM GIRLTALK ==================================== -->
-<section class="bg-[var(--color-primary-beige)] py-16">
-  <div class="mx-auto max-w-6xl px-6">
-    <div class="flex items-center justify-start gap-4 mb-10">
-      <img src="/stjerne_omos.png" alt="" class="w-35" />
-      <Heading size="h4">OM GIRLTALK</Heading>
-    </div>
-  </div>
-
-  <div class="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen">
-    <div class="border border-[var(--color-primary-beige)] bg-[var(--color-primary-brown)] text-[var(--color-primary-beige)]">
-      <div class="grid md:grid-cols-3">
-
-          <!-- HVEM ARBEJDER HOS GIRLTALK? -->
-        <article class="p-8 md:p-10 border-b border-[var(--color-primary-beige)] md:border-b-0 md:border-r">
-          <div class="h-36 md:h-40 flex items-center justify-center mb-6">
-            <img src="/omos_7.png" alt="" class="max-h-full max-w-full object-contain" />
-          </div>
-
-          <Heading size="h2" stylingclasses="!text-[var(--color-primary-beige)]">
-            HVEM ARBEJDER HOS GIRLTALK?
-          </Heading>
-
-          <Text teksttype="brødtekst" stylingclasses="mt-4 !text-[var(--color-primary-beige)] leading-relaxed text-sm md:text-base max-w-prose">
-            GirlTalks sekretariat er fordelt over fire lokalafdelinger i hhv. København,
-            Aalborg, Aarhus og Odense. GirlTalk bygger på et stærkt socialfagligt fundament.
-            Derudover har GirlTalk medarbejdere med flere forskellige baggrunde og fagligheder,
-            hvoraf mange er uddannet inden for psykologi, pædagogik samt kommunikation og marketing.
-          </Text>
-        </article>
-
-        <!-- FRIVILLIGE  -->
-        <article class="p-8 md:p-10 border-b border-[var(--color-primary-beige)] md:border-b-0 md:border-r flex flex-col">
-          <div class="h-36 md:h-40 flex items-center justify-center mb-6 order-1 md:order-3 md:mt-auto">
-            <img src="/omos_8.png" alt="" class="max-h-full max-w-full object-contain" />
-          </div>
-
-          <Heading size="h2" stylingclasses="!text-[var(--color-primary-beige)] order-2 md:order-1">
-            FRIVILLIGE
-          </Heading>
-
-          <Text teksttype="brødtekst" stylingclasses="mt-4 !text-[var(--color-primary-beige)] leading-relaxed text-sm md:text-base max-w-prose order-3 md:order-2">
-            Hovedparten af vores frivillige er engageret i vores indsatser målrettet unge,
-            og alle frivillige i ungeindsatserne er kvinder i alderen 18–35 år.
-            Uddannelse og rammesætning er helt afgørende i vores arbejde med frivillige,
-            og vi lægger stor vægt på at have et omfattende sikkerhedsnet i form af sparring,
-            fællesskab, introforløb, uddannelse, supervision og trivselssamtaler.
-          </Text>
-        </article>
-
-        <!--  GIRLTALKS KVALITETSMÆRKE  -->
-        <article class="p-8 md:p-10">
-          <div class="h-36 md:h-40 flex items-center justify-center mb-6">
-            <img src="/omos_9.png" alt="" class="max-h-full max-w-full object-contain" />
-          </div>
-
-          <Heading size="h2" stylingclasses="!text-[var(--color-primary-beige)]">
-            GIRLTALK KVALITETSMÆRKE
-          </Heading>
-
-          <Text teksttype="brødtekst" stylingclasses="mt-4 !text-[var(--color-primary-beige)] leading-relaxed text-sm md:text-base max-w-prose">
-            GirlTalks Ungerådgivning, Brevkassen Pigetanker og Rådgivning for forældre
-            er akkrediteret af RådgivningsDanmark. Akkrediteringen er et særligt
-            kvalitetsstempel på arbejdet i rådgivningerne.
-          </Text>
-
-          <div class="mt-6">
-            <Link
-              href="https://raadgivningsdanmark.dk/akkreditering/"
-              variant="textlink"
-              class="!text-[var(--color-primary-beige)] underline underline-offset-4 hover:opacity-70"
-            >
-              Du kan læse mere om RådgivningsDanmark her
-            </Link>
-          </div>
-        </article>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-
- <!-- ============================== RAPPORTER FOR INDSATSER ========================= -->
-<section class="mx-auto max-w-6xl px-6 py-16">
-  <div class="flex items-center justify-start gap-6">
-    <Heading size="h4">INDSATS RAPPORTER</Heading>
-    <img src="/stjerne_omos.png" alt="" class="w-35" />
-  </div>
-
-
-
-
-<!-- ==================================== LINKS ====================================== -->
-  <div class="mt-14 grid gap-10 md:grid-cols-2">
-    <section>
-      <Heading size="h2">ÅRSBERETNINGER</Heading>
-      <ul class="mt-4 space-y-2">
-        {aarsberetninger.map((item) => (
-          <li>
-            <Link
-              href={item.href} variant="textlink" class="text-[var(--color-primary-brown)] underline underline-offset-4 hover:opacity-70">
-              {item.text}
-            </Link>
-          </li>
-        ))}
-      </ul>
     </section>
 
-    <section>
-      <Heading size="h2">ÅRSREGNSKABER</Heading>
-      <ul class="mt-4 space-y-2">
-        {aarsregnskaber.map((item) => (
-          <li>
-            <Link
-              href={item.href} variant="textlink" class="text-[var(--color-primary-brown)] underline underline-offset-4 hover:opacity-70">
-              {item.text}
-            </Link>
-          </li>
-        ))}
-      </ul>
+    <!-- =============================== OM GIRLTALK ==================================== -->
+    <section class="bg-[var(--color-primary-beige)] py-16">
+      <div class="mx-auto max-w-6xl px-6 reveal">
+        <div class="flex items-center justify-start gap-4 mb-10">
+          <img src="/stjerne_omos.png" alt="" class="w-35" />
+          <Heading size="h4">OM GIRLTALK</Heading>
+        </div>
+      </div>
+
+      <div class="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen">
+        <div class="border border-[var(--color-primary-beige)] bg-[var(--color-primary-brown)] text-[var(--color-primary-beige)] reveal">
+          <div class="grid md:grid-cols-3">
+            <!-- HVEM ARBEJDER HOS GIRLTALK? -->
+            <article class="p-8 md:p-10 border-b border-[var(--color-primary-beige)] md:border-b-0 md:border-r">
+              <div class="h-36 md:h-40 flex items-center justify-center mb-6">
+                <img src="/omos_7.png" alt="" class="max-h-full max-w-full object-contain" />
+              </div>
+
+              <Heading size="h2" stylingclasses="!text-[var(--color-primary-beige)]"> HVEM ARBEJDER HOS GIRLTALK? </Heading>
+
+              <Text teksttype="brødtekst" stylingclasses="mt-4 !text-[var(--color-primary-beige)] leading-relaxed text-sm md:text-base max-w-prose"> GirlTalks sekretariat er fordelt over fire lokalafdelinger i hhv. København, Aalborg, Aarhus og Odense. GirlTalk bygger på et stærkt socialfagligt fundament. Derudover har GirlTalk medarbejdere med flere forskellige baggrunde og fagligheder, hvoraf mange er uddannet inden for psykologi, pædagogik samt kommunikation og marketing. </Text>
+            </article>
+
+            <!-- FRIVILLIGE  -->
+            <article class="p-8 md:p-10 border-b border-[var(--color-primary-beige)] md:border-b-0 md:border-r flex flex-col">
+              <div class="h-36 md:h-40 flex items-center justify-center mb-6 order-1 md:order-3 md:mt-auto">
+                <img src="/omos_8.png" alt="" class="max-h-full max-w-full object-contain" />
+              </div>
+
+              <Heading size="h2" stylingclasses="!text-[var(--color-primary-beige)] order-2 md:order-1"> FRIVILLIGE </Heading>
+
+              <Text teksttype="brødtekst" stylingclasses="mt-4 !text-[var(--color-primary-beige)] leading-relaxed text-sm md:text-base max-w-prose order-3 md:order-2"> Hovedparten af vores frivillige er engageret i vores indsatser målrettet unge, og alle frivillige i ungeindsatserne er kvinder i alderen 18–35 år. Uddannelse og rammesætning er helt afgørende i vores arbejde med frivillige, og vi lægger stor vægt på at have et omfattende sikkerhedsnet i form af sparring, fællesskab, introforløb, uddannelse, supervision og trivselssamtaler. </Text>
+            </article>
+
+            <!--  GIRLTALKS KVALITETSMÆRKE  -->
+            <article class="p-8 md:p-10">
+              <div class="h-36 md:h-40 flex items-center justify-center mb-6">
+                <img src="/omos_9.png" alt="" class="max-h-full max-w-full object-contain" />
+              </div>
+
+              <Heading size="h2" stylingclasses="!text-[var(--color-primary-beige)]"> GIRLTALK KVALITETSMÆRKE </Heading>
+
+              <Text teksttype="brødtekst" stylingclasses="mt-4 !text-[var(--color-primary-beige)] leading-relaxed text-sm md:text-base max-w-prose"> GirlTalks Ungerådgivning, Brevkassen Pigetanker og Rådgivning for forældre er akkrediteret af RådgivningsDanmark. Akkrediteringen er et særligt kvalitetsstempel på arbejdet i rådgivningerne. </Text>
+
+              <div class="mt-6">
+                <Link href="https://raadgivningsdanmark.dk/akkreditering/" variant="textlink" class="!text-[var(--color-primary-beige)] underline underline-offset-4 hover:opacity-70"> Du kan læse mere om RådgivningsDanmark her </Link>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
     </section>
-  </div>
-</section>
 
+    <!-- ============================== RAPPORTER FOR INDSATSER ========================= -->
+    <section class="mx-auto max-w-6xl px-6 py-16 reveal">
+      <div class="flex items-center justify-start gap-6">
+        <Heading size="h4">INDSATS RAPPORTER</Heading>
+        <img src="/stjerne_omos.png" alt="" class="w-35" />
+      </div>
 
+      <!-- ==================================== LINKS ====================================== -->
+      <div class="mt-14 grid gap-10 md:grid-cols-2 reveal">
+        <section>
+          <Heading size="h2">ÅRSBERETNINGER</Heading>
+          <ul class="mt-4 space-y-2">
+            {
+              aarsberetninger.map((item) => (
+                <li>
+                  <Link href={item.href} variant="textlink" class="text-[var(--color-primary-brown)] underline underline-offset-4 hover:opacity-70">
+                    {item.text}
+                  </Link>
+                </li>
+              ))
+            }
+          </ul>
+        </section>
 
-
+        <section>
+          <Heading size="h2">ÅRSREGNSKABER</Heading>
+          <ul class="mt-4 space-y-2">
+            {
+              aarsregnskaber.map((item) => (
+                <li>
+                  <Link href={item.href} variant="textlink" class="text-[var(--color-primary-brown)] underline underline-offset-4 hover:opacity-70">
+                    {item.text}
+                  </Link>
+                </li>
+              ))
+            }
+          </ul>
+        </section>
+      </div>
+    </section>
   </main>
 </MainLayout>

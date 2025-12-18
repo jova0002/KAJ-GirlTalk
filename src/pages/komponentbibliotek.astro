@@ -7,60 +7,193 @@ import Button from "../components/Button.astro";
 import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
 ---
+
 <MainLayout title="Titel">
-	<main class="container mx-auto p-4">
-		<Heading htmlheading="h1" size="large">Komponentbibliotek</Heading>
-        <Text stylingclasses="italic">Her kan du finde alle de komponenter, der er brugt i dette projekt.</Text>
-        <hr class="my-4" />
-         <!-- start på typografi -->
-        <section>
-            <Heading htmlheading="h2" size="medium">Typografi & ovesrkrifter</Heading>
-            <Text>Her kan du finde alle de komponenter, der er brugt i dette projekt.</Text>
-            <Heading htmlheading="h1" size="large">h1 - large - sans</Heading>
-            <Heading htmlheading="h2" size="medium">h2 - medium - sans</Heading>
-            <Heading htmlheading="h3" size="small">h3 - small - sans</Heading>
-            <Heading htmlheading="h1" size="large" font="serif">h1 - large - serif</Heading>
-            <Heading htmlheading="h2" size="medium" font="serif">h2 - medium - serif</Heading>
-            <Heading htmlheading="h3" size="small" font="serif">h3 - small - serif</Heading>
-            <Heading htmlheading="h3" size="large" font="display">h3 - large - display</Heading>
-            <Text teksttype="brødtekst">
-            Her er en sektion brødtekst: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem doloremque commodi eaque quisquam quasi recusandae veniam. Corporis totam <Link href="#">Default link: </Link> reiciendis quibusdam ratione iure aut, numquam tenetur voluptatem exercitationem sequi enim!
+  <section class="bg-primary-beige">
+    <main class="container mx-auto p-4">
+      <Heading htmlheading="h2" size="h2" stylingclasses="text-brown">Komponentbibliotek</Heading>
+      <Text stylingclasses="italic">Her kan du finde alle de komponenter, der er brugt i dette projekt.</Text>
+      <hr class="my-4" />
+      <!-- start på typografi -->
+      <section class="max-w-5xl mx-auto px-4 py-16 space-y-12">
+        <!-- Section intro -->
+        <div class="space-y-4">
+          <Heading htmlheading="h2" size="h2" stylingclasses="text-brown">Typografi & overskrifter</Heading>
+          <Text> Her kan du finde alle de komponenter, der er brugt i dette projekt. </Text>
+        </div>
+
+        <!-- Typography table -->
+        <div class="grid gap-y-10">
+          <!-- ITEM -->
+          <div class="grid md:grid-cols-2 gap-4 items-baseline border-b border-primary-brown pb-6 text-brown">
+            <Text class="text-brown/70">H1 · Large · Instrument Sans</Text>
+            <Heading htmlheading="h1" size="h1">H1</Heading>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-4 items-baseline border-b border-primary-brown pb-6 text-brown">
+            <Text class="text-brown/70">H2 · Medium · Instrument Sans</Text>
+            <Heading htmlheading="h2" size="h2">H2</Heading>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-4 items-baseline border-b border-primary-brown pb-6 text-brown">
+            <Text class="text-brown/70">H3 · Small · Instrument Sans</Text>
+            <Heading htmlheading="h3" size="h3">H3</Heading>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-4 items-baseline border-b border-primary-brown pb-6 text-brown">
+            <Text class="text-brown/70">H4 · Large</Text>
+            <Heading htmlheading="h4" size="h4">H4</Heading>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-4 items-baseline border-b border-primary-brown pb-6 text-brown">
+            <Text class="text-brown/70">H5 · Medium</Text>
+            <Heading htmlheading="h5" size="h5">H5</Heading>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-4 items-baseline border-b border-primary-brown pb-6 text-brown">
+            <Text class="text-brown/70">P-stor · Body text</Text>
+            <Heading htmlheading="pstor" size="pstor"> Dette er brødtekst i P-stor </Heading>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-4 items-baseline border-b border-primary-brown pb-6 text-brown">
+            <Text class="text-brown/70">Microcopy stor</Text>
+            <Heading htmlheading="microcopystor" size="microcopystor"> Microcopy stor </Heading>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-4 items-baseline border-b border-primary-brown pb-6 text-brown">
+            <Text class="text-brown/70">Microcopy lille</Text>
+            <Heading htmlheading="microcopylille" size="microcopylille"> Microcopy lille </Heading>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-4 items-baseline border-b border-primary-brown pb-6 text-brown">
+            <Text class="text-brown/70">Form headings</Text>
+            <Heading htmlheading="formheadings" size="formheadings"> Form heading </Heading>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-4 items-baseline border-b border-primary-brown pb-6 text-brown">
+            <Text class="text-brown/70">Large button text</Text>
+            <Heading htmlheading="largebutton" size="largebutton"> Large Button </Heading>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-4 items-baseline border-b border-primary-brown pb-6">
+            <Text class="text-brown/70">Small button text</Text>
+            <Heading htmlheading="smallbutton" size="smallbutton"> Small Button </Heading>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-4 items-baseline">
+            <Text class="text-brown/70">XS / XXS button text</Text>
+            <div class="flex gap-4 flex-wrap text-brown">
+              <Heading htmlheading="xsbutton" size="xsbutton">XS Button</Heading>
+              <Heading htmlheading="xxsbutton" size="xxsbutton">XXS Button</Heading>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="max-w-5xl mx-auto px-4 py-16 space-y-12 text-brown">
+        <!-- Section heading -->
+        <div class="space-y-4">
+          <Heading htmlheading="h2" size="h2" stylingclasses="text-brown"> Brødtekst & links </Heading>
+          <Text stylingclasses="text-brown"> Eksempler på brødtekst, konsultativ tekst og links, som bruges i projektet. </Text>
+        </div>
+
+        <!-- Examples -->
+        <div class="space-y-10">
+          <!-- Default body text + link -->
+          <div class="grid md:grid-cols-2 gap-4 border-b border-brown/30 pb-6">
+            <Text stylingclasses="text-brown"> Brødtekst · Default link </Text>
+
+            <Text teksttype="brødtekst" stylingclasses="text-brown">
+              Her er en sektion brødtekst: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam dolorem doloremque commodi eaque quisquam quasi recusandae veniam.
+              <Link href="#" class="text-brown underline underline-offset-4 transition-opacity hover:opacity-50"> Default link </Link>
+              reiciendis quibusdam ratione iure aut.
             </Text>
-            <Text teksttype="konsultativ">
-            Her en sektion konsultativ tekst: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem doloremque commodi eaque quisquam quasi recusandae veniam. Corporis totam reiciendis quibusdam ratione iure aut, numquam tenetur voluptatem exercitationem sequi enim!
+          </div>
+
+          <!-- Consultative text -->
+          <div class="grid md:grid-cols-2 gap-4 border-b border-brown/30 pb-6">
+            <Text stylingclasses="text-brown"> Brødtekst · Konsultativ </Text>
+
+            <Text teksttype="brødtekst" stylingclasses="text-brown"> Her er en sektion konsultativ tekst: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam dolorem doloremque commodi eaque quisquam quasi recusandae veniam. </Text>
+          </div>
+
+          <!-- Body text with extra styling -->
+          <div class="grid md:grid-cols-2 gap-4">
+            <Text stylingclasses="text-brown"> Brødtekst · Ekstra styling </Text>
+
+            <Text teksttype="brødtekst" stylingclasses="text-brown leading-relaxed">
+              Her er en sektion brødtekst med ekstra css: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam dolorem doloremque commodi eaque quisquam quasi recusandae veniam.
+              <Link href="#" class="text-brown underline underline-offset-4 transition-opacity hover:opacity-70"> Default link </Link>
+              reiciendis quibusdam ratione iure aut.
             </Text>
-            <Text teksttype="brødtekst" stylingclasses="italic">
-            Her er en sektion brødtekst med ekstra css: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem doloremque commodi eaque quisquam quasi recusandae veniam. Corporis totam <Link href="#">Default link: </Link> reiciendis quibusdam ratione iure aut, numquam tenetur voluptatem exercitationem sequi enim!
-            </Text>
-        </section>
-        <!-- slut på typografi -->
-        <hr class="my-4" />
-        <!-- Link komponent instanser -->
-        <section>
-            <Heading htmlheading="h2" size="medium">Links</Heading>
-            <Text teksttype="brødtekst"><Link href="#">Default link: </Link>Default linket er en del af en tekst, og burde gerne fungere som et <Link href="#">link</Link> i en paragraf.</Text>
-            <Text><Link href="#" variant="primary">Link variant: primary</Link></Text>
-            <Text><Link href="#" variant="primary" size="small">Link variant: primary size small</Link></Text>
-            <Text><Link href="#" variant="primary" size="medium">Link variant: primary size medium</Link></Text>
-            <Text><Link href="#" variant="primary" size="large">Link variant: primary size large</Link></Text>
-            <Text><Link href="#" variant="secondary" size="small">Link variant: secondary size small</Link></Text>
-            <Text><Link href="#" variant="secondary" size="medium">Link variant: secondary size medium</Link></Text>
-            <Text><Link href="#" variant="secondary" size="large">Link variant: secondary size large</Link></Text>
-        </section>
+          </div>
+        </div>
+      </section>
+
+      <!-- slut på typografi -->
+      <hr class="my-4" />
+      <!-- Link komponent instanser -->
+      <section>
+        <Heading htmlheading="h2" size="medium">Links</Heading>
+        <Text teksttype="brødtekst"><Link href="#">Default link: </Link>Default linket er en del af en tekst, og burde gerne fungere som et <Link href="#">link</Link> i en paragraf.</Text>
+
         <!-- Slut på Link komponent instanser -->
-         <hr class="my-4" />
-        <!-- Buttons komponent instanser -->
-        <section>
-            <Heading htmlheading="h2" size="medium">Buttons</Heading>
-            <Text><Button>Default knap</Button></Text>
-            <Text><Button variant="primary">Button variant: primary</Button></Text>
-            <Text><Button variant="primary" size="small">Button variant: primary size small</Button></Text>
-            <Text><Button variant="primary" size="medium">Button variant: primary size medium</Button></Text>
-            <Text><Button variant="primary" size="large">Button variant: primary size large</Button></Text>
-            <Text><Button variant="secondary" size="small">Button variant: secondary size small</Button></Text>
-            <Text><Button variant="secondary" size="medium">Button variant: secondary size medium</Button></Text>
-            <Text><Button variant="secondary" size="large">Variant: secondary size large</Button></Text>
+        <hr class="my-4" />
+        <section class="max-w-5xl mx-auto px-4 py-16 space-y-14 text-brown">
+          <!-- Section heading -->
+          <div class="space-y-4">
+            <Heading htmlheading="h2" size="h2" stylingclasses="text-brown"> Buttons </Heading>
+            <Text stylingclasses="text-brown"> Oversigt over knap-varianter og størrelser brugt i projektet. </Text>
+          </div>
+
+          <section class="space-y-12 text-[var(--color-primary-brown)]">
+            <!-- Beige -->
+            <div class="space-y-4">
+              <Heading htmlheading="h3" size="h3">Variant: Beige</Heading>
+              <div class="flex flex-wrap gap-4">
+                <div class="w-fit"><Button as="a" href="/" variant="beige" size="large">LARGE</Button></div>
+                <div class="w-fit"><Button as="a" href="/" variant="beige" size="small">SMALL</Button></div>
+                <div class="w-fit"><Button as="a" href="/" variant="beige" size="xs">XS</Button></div>
+                <div class="w-fit"><Button as="a" href="/" variant="beige" size="xxs">XXS</Button></div>
+              </div>
+            </div>
+
+            <!-- Pink -->
+            <div class="space-y-4">
+              <Heading htmlheading="h3" size="h3">Variant: Pink</Heading>
+              <div class="flex flex-wrap gap-4">
+                <div class="w-fit"><Button as="a" href="/" variant="pink" size="large">LARGE</Button></div>
+                <div class="w-fit"><Button as="a" href="/" variant="pink" size="small">SMALL</Button></div>
+                <div class="w-fit"><Button as="a" href="/" variant="pink" size="xs">XS</Button></div>
+                <div class="w-fit"><Button as="a" href="/" variant="pink" size="xxs">XXS</Button></div>
+              </div>
+            </div>
+
+            <!-- Dark -->
+            <div class="space-y-4">
+              <Heading htmlheading="h3" size="h3">Variant: Dark</Heading>
+              <div class="flex flex-wrap gap-4">
+                <div class="w-fit"><Button as="a" href="/" variant="dark" size="large">LARGE</Button></div>
+                <div class="w-fit"><Button as="a" href="/" variant="dark" size="small">SMALL</Button></div>
+                <div class="w-fit"><Button as="a" href="/" variant="dark" size="xs">XS</Button></div>
+                <div class="w-fit"><Button as="a" href="/" variant="dark" size="xxs">XXS</Button></div>
+              </div>
+            </div>
+
+            <!-- Dark Pink -->
+            <div class="space-y-4">
+              <Heading htmlheading="h3" size="h3">Variant: Dark pink</Heading>
+              <div class="flex flex-wrap gap-4">
+                <div class="w-fit"><Button as="a" href="/" variant="darkpink" size="large">LARGE</Button></div>
+                <div class="w-fit"><Button as="a" href="/" variant="darkpink" size="small">SMALL</Button></div>
+                <div class="w-fit"><Button as="a" href="/" variant="darkpink" size="xs">XS</Button></div>
+                <div class="w-fit"><Button as="a" href="/" variant="darkpink" size="xxs">XXS</Button></div>
+              </div>
+            </div>
+          </section>
         </section>
-        <!-- Slut på Buttons komponent instanser -->
-	</main>
+      </section>
+      <!-- Slut på Buttons komponent instanser -->
+    </main>
+  </section>
 </MainLayout>
