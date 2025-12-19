@@ -14,26 +14,28 @@ import Aktuelt from "../components/Aktuelt.astro";
 
 <MainLayout title="Titel">
   <main class="bg-[var(--color-primary-beige)]">
+    <!-- ================= HERO SECTION ================= -->
+
     <section class="relative reveal">
       <!-- GIRL -->
       <Heading size="h1" stylingclasses="pl-4 text-primary-brown md:pl-15"> GIRL</Heading>
       <!-- STJERNE -->
       <img src="/stjerne_forside.svg" alt="" class="absolute top-0 left-60 w-32 md:w-100 md:left-180" />
       <!-- TALK (lodret) -->
-      <Heading size="h1" stylingclasses="absolute rotate-90 text-primary-brown -right-12 top-20 md:top-59 md:-right-28"> TALK </Heading>
+      <Heading size="h1" stylingclasses="absolute rotate-90 text-primary-brown -right-10 top-20 md:top-59 md:-right-28"> TALK </Heading>
       <!-- h2 -->
       <div class="md:grid md:grid-cols-2">
         <div class="md:pl-10">
           <Heading size="h2" stylingclasses="text-primary-brown pt-15 pl-4 pr-8 max-w-100 md:max-w-200">VIL DU VÆRE MED TIL AT HJÆLPE ANDRE, ELLER HAR DU SELV BRUG FOR HJÆLP?</Heading>
           <!-- Knapper -->
-          <div class="grid grid-cols-2 mt-8 justify-items-start pl-4">
+          <div class="grid grid-cols-2 mt-8 justify-items-start pl-4 pb-6 md:pb-0">
             <Button as="a" href="/Frivilig" variant="pink" class="w-fit" size="small">BLIV FRIVILLIG</Button>
             <Button as="a" href="#footer" stylingclasses="mt-8">KONTAKT OS HER</Button>
           </div>
         </div>
         <div>
           <!-- billede 1 -->
-          <img src="/forside_1.png" alt="" class="w-90 p-4 ml-37 md:w-100" />
+          <img src="/forside_1.png" alt="" class="w-90 p-4 ml-35 md:ml-37 md:w-100" />
         </div>
       </div>
       <!-- Tekst -->
@@ -44,14 +46,18 @@ import Aktuelt from "../components/Aktuelt.astro";
             <Heading size="pstor" stylingclasses="md:pr-8 text-brown">Bliv frivillig i GirlTalk og gør en reel forskel for piger, der har brug for nogen til at lytte. Vi kæmper for unges trivsel og for, at ingen skal stå alene med det svære. Som frivillig bliver du en del af et stærkt fællesskab, udvikler dig fagligt og oplever, hvor meget det betyder at være der for andre. </Heading>
           </div>
           <!-- Knap -->
-          <Button as="a" href="/Omos" stylingclasses="mt-8">MØD GIRLTALK</Button>
+          <div class="pl-4 md:pl-4 md:pt-8">
+            <Button as="a" href="/Omos" stylingclasses="mt-8">MØD GIRLTALK</Button>
+          </div>
         </div>
         <!-- billede 2 -->
         <div>
           <img src="/forside_2.png" alt="" class="p-10" />
         </div>
       </div>
-      <!-- quotes -->
+
+      <!-- ================= QUOTES ================= -->
+
       <div class="p-4 space-y-20 md:p-20 relative pb-30 overflow-hidden reveal">
         <div class="max-w-85 md:max-w-200">
           <img src="/forside_quote.svg" alt="" class="w-15 md:w-30" />
@@ -64,6 +70,7 @@ import Aktuelt from "../components/Aktuelt.astro";
         </div>
       </div>
     </section>
+
     <!-- cards -->
     <section class="grid md:grid-cols-3 reveal">
       <img src="/forside_3.png" alt="" class="w-full order-0 md:order-2" />
@@ -71,6 +78,9 @@ import Aktuelt from "../components/Aktuelt.astro";
 
       <Forside_card1 title="STÆRKERE VOKSNE, STÆRKERE UNGE" text="Du skal ikke være perfekt, for at gøre en forskel. Med podcast, foredrag og rådgivning støtter vi dig, der har en ung i dit liv og gerne vil være der, også når det er svært." linkText="Find os på Spotify" href="https://open.spotify.com/show/15oq5yztN1NwZjQn4HIMLg?si=2041342865dd449f&nd=1&dlsi=ddae7b0c28a247a5" variant="spotify" />
     </section>
+
+    <!-- ================= AKTUELT ================= -->
+
     <!-- Aktuelt-->
     <div class="relative">
       <Heading size="h4" stylingclasses="flex text-brown justify-end pt-25 pr-4 pb-5 reveal">AKTUELT</Heading>

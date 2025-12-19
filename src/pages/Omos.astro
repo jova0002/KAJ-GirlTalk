@@ -5,6 +5,7 @@ import Text from "../components/Text.astro";
 import Link from "../components/Link.astro";
 import Button from "../components/Button.astro";
 import Navbar from "../components/Navbar.astro";
+import Aktuelt from "../components/Aktuelt.astro";
 
 const aarsberetninger = [
   { text: "Årsberetning 2024", href: "https://girltalk.dk/media/py0bdaef/2024-a-rsberetning.pdf" },
@@ -33,13 +34,13 @@ const aarsregnskaber = [
             <div class="mx-auto max-w-md md:mx-0">
               <div class="text-center md:text-left">
                 <Heading size="h5" stylingclasses="leading-none">OM</Heading>
-                <Heading size="h5" stylingclasses="leading-none mt-4 translate-x-12 md:mt-10 md:translate-x-36"> OS </Heading>
+                <Heading size="h5" stylingclasses="leading-none mt-4 pl-60 md:mt-10 md:pl-40"> OS </Heading>
               </div>
 
-              <Text size="pstor" stylingclasses="mt-8 md:mt-14 max-w-[34ch] mx-auto md:mx-0 text-left"> I GirlTalk kæmper vi for unges trivsel og for, at ingen piger skal stå alene med det, der er svært. </Text>
+              <Heading size="pstor" stylingclasses="mt-8 md:mt-14 max-w-[34ch] mx-auto md:mx-0 text-left pr-35 md:pr-10"> I GirlTalk kæmper vi for unges trivsel og for, at ingen piger skal stå alene med det, der er svært. </Heading>
 
-              <div class="mt-15 mb-5 flex justify-center md:justify-start">
-                <Button as="a" href="#footer" variant="pink" size="large" class="whitespace-nowrap md:translate-x-16"> KONTAKT OS HER </Button>
+              <div class="mt-15 mb-5 flex justify-center md:justify-start pl-40 md:pl-40">
+                <Button as="a" href="#footer" variant="pink" size="small" class="whitespace-nowrap md:translate-x-16"> KONTAKT OS HER </Button>
               </div>
             </div>
           </div>
@@ -52,14 +53,12 @@ const aarsregnskaber = [
     </section>
 
     <!-- =============================== VORES VÆRDIER =============================== -->
-    <section class="bg-[var(--color-primary-beige)] py-16">
-      <div class="mx-auto max-w-6xl px-6 reveal">
-        <div class="flex items-center justify-end gap-6">
-          <img src="/stjerne_omos.png" alt="" class="w-35" />
-          <Heading size="h4">VORES VÆRDIER</Heading>
-        </div>
-      </div>
+    <div class="relative mt-2 md:mt-20">
+      <Heading size="h4" stylingclasses="flex text-brown justify-end pt-25 pr-4 pb-0 reveal">VORES VÆRDIER</Heading>
+      <img src="/stjerne_forside.svg" alt="" class="absolute w-30 top-15 left-22 md:w-70 md:left-110 md:top-2 reveal" />
+    </div>
 
+    <section class="bg-[var(--color-primary-beige)]">
       <div class="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen mt-10 reveal">
         <div class="border border-[var(--color-primary-brown)]">
           <!-- ALLE HAR BRUG FOR EN AT TALE MED -->
@@ -128,14 +127,13 @@ const aarsregnskaber = [
     </section>
 
     <!-- =============================== OM GIRLTALK ==================================== -->
-    <section class="bg-[var(--color-primary-beige)] py-16">
-      <div class="mx-auto max-w-6xl px-6 reveal">
-        <div class="flex items-center justify-start gap-4 mb-10">
-          <img src="/stjerne_omos.png" alt="" class="w-35" />
-          <Heading size="h4">OM GIRLTALK</Heading>
-        </div>
-      </div>
 
+    <div class="relative mt-2 md:mt-0">
+      <Heading size="h4" stylingclasses="flex text-brown justify-start pt-25 pl-28 md:pl-65 pb-0 reveal">OM GIRLTALK</Heading>
+      <img src="/stjerne_forside.svg" alt="" class="absolute w-30 top-15 left-0 md:w-70 md:left-0 md:top-2 reveal" />
+    </div>
+
+    <section class="bg-[var(--color-primary-beige)] pt-4">
       <div class="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen">
         <div class="border border-[var(--color-primary-beige)] bg-[var(--color-primary-brown)] text-[var(--color-primary-beige)] reveal">
           <div class="grid md:grid-cols-3">
@@ -179,6 +177,65 @@ const aarsregnskaber = [
         </div>
       </div>
     </section>
+
+    <!-- Aktuelt-->
+    <section id="ansog" class="relative reveal bg-[var(--color-primary-beige)] overflow-hidden pt-40">
+      <!-- RIGHT STAR -->
+      <img src="/stjerne_forside.svg" alt="" aria-hidden="true" class="absolute left-85 -top-22 w-60 md:w-120 md:left-280
+           md:-top-40 pointer-events-none" />
+
+      <!-- LEFT STAR  -->
+      <img src="/stjerne_forside.svg" alt="" aria-hidden="true" class="absolute left-80 top-45
+           w-25 md:w-50 md:left-220 md:top-60 pointer-events-none" />
+
+      <!-- CONTENT -->
+      <div class="relative z-10 px-6 py-12 pl-4 pb-3 md:pt-30 md:pb-0 md:px-10 md:py-10">
+        <div class="max-w-5xl">
+          <Heading size="h4" htmlheading="h2" stylingclasses="text-brown tracking-title uppercase"> RAPPORTER FOR INDSATSER </Heading>
+        </div>
+      </div>
+    </section>
+
+    <!-- Aktuelt / Rapporter & vedtægter -->
+    <div class="border border-primary-brown divide-y divide-primary-brown">
+      <!-- Rapporter for Ungerådgivning -->
+      <Aktuelt
+        title="Rapporter for Ungerådgivning"
+        image="/omos_10.png"
+        text={`Rådgivningsvirksomheden Cowi har undersøgt de samfundsmæssige effekter af vores anonyme chatrådgivning for unge.
+
+Rapporten viser, hvordan der er store samfundsøkonomiske gevinster forbundet med GirlTalks Ungerådgivning. Dette understøttes af pigerne og de unge kvinders egne tilbagemeldinger på brugerevalueringerne samt de gennemførte interviews.`}
+        link1Text="Læs resumé af rapporten her"
+        link1Href="#"
+        link2Text="Læs hele rapporten her"
+        link2Href="#"
+      />
+
+      <!-- Rapporter for EmpowR -->
+      <Aktuelt
+        title="Rapporter for EmpowR"
+        image="/omos_11.png"
+        reverse
+        text={`Rådgivningsvirksomheden Cowi har undersøgt de samfundsmæssige effekter af vores forebyggende indsats EmpowR, et gruppeforløb for piger i alderen 13–16 år.
+
+Rapporten viser, hvordan EmpowR kan skabe store gevinster for samfundet. Det gælder for den enkelte piges oplevelse af livskvalitet. Og det gælder for de omkostninger, som samfundet kan spare, hver gang en pige i mistrivsel bliver hjulpet til at få det bedre eller undgår forværring.`}
+        link1Text="Læs resumé af rapporten om fællesskabet EmpowR her"
+        link1Href="#"
+        link2Text="Læs hele rapporten om fællesskabet EmpowR her"
+        link2Href="#"
+      />
+
+      <!-- Vedtægter -->
+      <Aktuelt
+        title="Vedtægter"
+        image="/omos_12.png"
+        text={`Her finder du vores vedtægter, som beskriver foreningens formål, medlemskriterier, bestyrelsens sammensætning, generalforsamlinger og retningslinjer for økonomi og drift.
+
+Vedtægterne forklarer også, hvordan foreningen arbejder for at hjælpe og støtte unge piger gennem rådgivning og forebyggende indsatser, samt reglerne for foreningens ophør og ændringer af vedtægterne.`}
+        link1Text="Læs vedtægter her"
+        link1Href="#"
+      />
+    </div>
 
     <!-- ============================== RAPPORTER FOR INDSATSER ========================= -->
     <section class="mx-auto max-w-6xl px-6 py-16 reveal">
