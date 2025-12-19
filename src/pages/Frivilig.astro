@@ -104,7 +104,10 @@ import Button from "../components/Button.astro";
              text-brown">
           <!-- ================= NAME ================= -->
           <div class="mb-8">
-            <Heading size="formheadings" htmlheading="label"> Fulde navn </Heading>
+            <label for="name">
+              <Heading size="formheadings" htmlheading="span"> Fulde navn </Heading>
+            </label>
+
             <input type="text" placeholder="Indtast fulde navn her" class="w-full mt-2 p-2 bg-transparent
          border border-[var(--color-primary-brown)] text-[var(--color-primary-brown)]
          placeholder-[var(--color-primary-brown)] placeholder-opacity-60 focus:outline-none
@@ -113,7 +116,9 @@ import Button from "../components/Button.astro";
 
           <!-- ================= EMAIL ================= -->
           <div class="mb-8">
-            <Heading size="formheadings" htmlheading="label"> Email adresse </Heading>
+            <label for="email">
+              <Heading size="formheadings" htmlheading="span"> Email adresse </Heading>
+            </label>
             <input type="email" placeholder="Indtast email adresse her" class="w-full mt-2 p-2 bg-transparent
          border border-[var(--color-primary-brown)] text-[var(--color-primary-brown)]
          placeholder-[var(--color-primary-brown)] placeholder-opacity-60 focus:outline-none
@@ -123,7 +128,9 @@ import Button from "../components/Button.astro";
 
           <!-- ================= PHONE ================= -->
           <div class="mb-10">
-            <Heading size="formheadings" htmlheading="label"> Telefon nummer </Heading>
+            <label for="telefon">
+              <Heading size="formheadings" htmlheading="span"> Telefon nummer </Heading>
+            </label>
             <input type="tel" placeholder="Indtast telefon nummer her" class="w-full mt-2 p-2 bg-transparent
          border border-[var(--color-primary-brown)] text-[var(--color-primary-brown)]
          placeholder-[var(--color-primary-brown)] placeholder-opacity-60 focus:outline-none
@@ -205,7 +212,7 @@ import Button from "../components/Button.astro";
 
           <!-- ================= SUBMIT ================= -->
           <div class="pt-10 border-t border-[var(--color-primary-brown)]">
-            <Button as="a" href="/Frivilig" variant="pink" size="small">SEND</Button>
+            <Button as="button" type="submit" variant="pink" size="small"> SEND </Button>
           </div>
         </form>
       </div>
@@ -218,8 +225,6 @@ import Button from "../components/Button.astro";
       <div class="w-full">
         <!-- BORDER + GRID -->
         <div class="grid md:grid-cols-2">
-          <!-- IF U WANT TO CHANGE BORDER THEN DELETE -->
-
           <!-- IMAGE -->
           <div class="w-full h-full md:order-2">
             <img src="/sitting_girl.webp" alt="Telefon" class="w-full h-full object-cover" />

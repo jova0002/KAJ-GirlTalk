@@ -2,7 +2,7 @@
 import Heading from "./Heading.astro";
 import Text from "./Text.astro";
 
-const { title = "", text = "", date = "", image = "", href = "", reverse = false } = Astro.props;
+const { title = "", text = "", date = "", image = "", href = "", reverse = false, underlineTitle = true, link1Text = "", link1Href = "", link2Text = "", link2Href = "" } = Astro.props;
 ---
 
 <article class="bg-[var(--color-primary-beige)]">
@@ -12,26 +12,51 @@ const { title = "", text = "", date = "", image = "", href = "", reverse = false
 
     <!-- TEXT -->
     <div
-      class={`
-        p-20 pt-30 text-brown
+      class={`p-20 text-brown border-[var(--color-primary-brown)]
         ${reverse ? "md:order-2 md:border-l" : "md:order-1 md:border-r"}
-        border-[var(--color-primary-brown)]
-        border-t md:border-t-0
-      `}
+        border-t md:border-t-0`}
     >
-      <a href={href} class="inline-block hover:opacity-80 transition-opacity">
-        <Heading size="h2" stylingclasses="uppercase underline underline-offset-4">
-          {title}
-        </Heading>
-      </a>
+      {
+        href ? (
+          <a href={href} class="inline-block">
+            <Heading size="h2" htmlheading="h2" stylingclasses={`uppercase ${underlineTitle ? "underline underline-offset-4" : ""}`}>
+              {title}
+            </Heading>
+          </a>
+        ) : (
+          <Heading size="h2" htmlheading="h2" stylingclasses={`uppercase ${underlineTitle ? "underline underline-offset-4" : ""}`}>
+            {title}
+          </Heading>
+        )
+      }
 
-      <Text teksttype="brødtekst" stylingclasses="mt-6">
+      <Text teksttype="brødtekst" stylingclasses="mt-10 whitespace-pre-line">
         {text}
       </Text>
 
-      <Text teksttype="brødtekst" stylingclasses="mt-6">
-        {date}
-      </Text>
+      {
+        link1Text && link1Href && (
+          <a href={link1Href} class="block mt-8 underline underline-offset-4 text-brown">
+            {link1Text}
+          </a>
+        )
+      }
+
+      {
+        link2Text && link2Href && (
+          <a href={link2Href} class="block mt-4 underline underline-offset-4 text-brown">
+            {link2Text}
+          </a>
+        )
+      }
+
+      {
+        date && (
+          <Text teksttype="brødtekst" stylingclasses="mt-10">
+            {date}
+          </Text>
+        )
+      }
     </div>
   </div>
 </article>
